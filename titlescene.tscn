@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://wn6vj121tjbt"]
+
+[ext_resource type="Script" uid="uid://cvl2j2he2k0gc" path="res://titlescene.gd" id="1_jq2n0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uj3xc"]
+load_path = "res://.godot/imported/Free-Nature-Backgrounds-Pixel-Art4.png-7bcef269e16cd62c895b568becc313ce.ctex"
+
+[node name="Title Screen" type="Node2D" unique_id=1101970525]
+script = ExtResource("1_jq2n0")
+
+[node name="Background" type="TextureRect" parent="." unique_id=578470203]
+offset_left = -24.000002
+offset_top = -76.0
+offset_right = 1776.0
+offset_bottom = 1124.0
+scale = Vector2(0.66657126, 0.6670473)
+texture = SubResource("CompressedTexture2D_uj3xc")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=644053995]
+clip_contents = false
+offset_left = 276.0
+offset_top = 45.0
+offset_right = 913.92957
+offset_bottom = 218.83841
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "WarioWare"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=207871012]
+anchors_preset = -1
+anchor_left = 1.493
+anchor_top = -4.314
+anchor_right = 1.493
+anchor_bottom = -4.314
+offset_left = 410.0
+offset_top = 227.0
+offset_right = 722.0
+offset_bottom = 497.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1909974234]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=961909442]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=448361926]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit
+"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
