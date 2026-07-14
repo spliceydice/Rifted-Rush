@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://b0v38b6626573"]
 
+[ext_resource type="Texture2D" uid="uid://d15bjiuo23i4k" path="res://wario-ware-inc-minigame-mania-game-boy-advance-art-banner.jpg" id="1_4quuv"]
+
 [node name="level_scene" type="Node2D" unique_id=1175418438]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=370892069]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.60002875, 0.5999147)
+texture = ExtResource("1_4quuv")
