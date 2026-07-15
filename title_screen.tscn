@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://wn6vj121tjbt"]
 
-[ext_resource type="Script" uid="uid://cvl2j2he2k0gc" path="res://titlescene.gd" id="1_jq2n0"]
+[ext_resource type="Script" uid="uid://cvl2j2he2k0gc" path="res://titlescene.gd" id="1_v6p8y"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uj3xc"]
 load_path = "res://.godot/imported/Free-Nature-Backgrounds-Pixel-Art4.png-7bcef269e16cd62c895b568becc313ce.ctex"
 
-[node name="Title Screen" type="Node2D" unique_id=1101970525]
-script = ExtResource("1_jq2n0")
+[node name="title_screen" type="Node2D" unique_id=1101970525]
+script = ExtResource("1_v6p8y")
 
 [node name="Background" type="TextureRect" parent="." unique_id=578470203]
 offset_left = -24.000002
