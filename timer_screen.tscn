@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://b0v38b6626573"]
 
-[ext_resource type="Script" uid="uid://bmlq12eg51vyj" path="res://timer_screen.gd" id="1_3mivm"]
-[ext_resource type="Texture2D" uid="uid://d15bjiuo23i4k" path="res://wario-ware-inc-minigame-mania-game-boy-advance-art-banner.jpg" id="1_4quuv"]
-[ext_resource type="Texture2D" uid="uid://t8rjj2ndouqb" path="res://mc_hc_heart.png" id="3_lwxgr"]
+[ext_resource type="Script" uid="uid://bmlq12eg51vyj" path="res://timer_screen.gd" id="1_ue55m"]
+[ext_resource type="Texture2D" uid="uid://d15bjiuo23i4k" path="res://wario-ware-inc-minigame-mania-game-boy-advance-art-banner.jpg" id="2_c84u7"]
+[ext_resource type="Texture2D" uid="uid://t8rjj2ndouqb" path="res://mc_hc_heart.png" id="3_ai4b2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8wodn"]
 load_path = "res://.godot/imported/mc_hc_heart.png-018f4a0aefb337b0af65b9a84f6f2fab.ctex"
 
-[node name="level_scene" type="Node2D" unique_id=1175418438]
-script = ExtResource("1_3mivm")
+[node name="timer_screen" type="Node2D" unique_id=1175418438]
+script = ExtResource("1_ue55m")
 
 [node name="Background" type="TextureRect" parent="." unique_id=370892069]
 offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.60002875, 0.5999147)
-texture = ExtResource("1_4quuv")
+texture = ExtResource("2_c84u7")
 
 [node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=1609419737]
 offset_left = 178.00002
@@ -30,19 +30,19 @@ texture = SubResource("CompressedTexture2D_8wodn")
 
 [node name="Garlic2" type="TextureRect" parent="GarlicContainer" unique_id=76153963]
 layout_mode = 2
-texture = ExtResource("3_lwxgr")
+texture = ExtResource("3_ai4b2")
 
 [node name="Garlic3" type="TextureRect" parent="GarlicContainer" unique_id=342279322]
 layout_mode = 2
-texture = ExtResource("3_lwxgr")
+texture = ExtResource("3_ai4b2")
 
 [node name="Garlic4" type="TextureRect" parent="GarlicContainer" unique_id=87595973]
 layout_mode = 2
-texture = ExtResource("3_lwxgr")
+texture = ExtResource("3_ai4b2")
 
 [node name="Garlic5" type="TextureRect" parent="GarlicContainer" unique_id=2122531426]
 layout_mode = 2
-texture = ExtResource("3_lwxgr")
+texture = ExtResource("3_ai4b2")
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=31890924]
 clip_contents = false

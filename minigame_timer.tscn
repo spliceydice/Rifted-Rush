@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b8x1uvs0ls6uq"]
+
+[node name="minigame_timer" type="Node2D" unique_id=603328823]
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=1056204616]
+offset_right = 40.0
+offset_bottom = 40.0

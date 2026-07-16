@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://d1tk3xi631jt3"]
+
+[ext_resource type="Texture2D" uid="uid://d15bjiuo23i4k" path="res://wario-ware-inc-minigame-mania-game-boy-advance-art-banner.jpg" id="1_2n61g"]
+[ext_resource type="PackedScene" uid="uid://ckemy0upjpia0" path="res://player.tscn" id="2_gi7k6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc03w"]
+size = Vector2(1151, 63)
+
+[node name="minigame_1" type="Node2D" unique_id=293914996]
+
+[node name="ScrollingBackgrund" type="Parallax2D" parent="." unique_id=524298262]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackgrund" unique_id=1189384432]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.5999762, 0.5999762)
+texture = ExtResource("1_2n61g")
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=1799438467]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=977382174]
+offset_top = 587.0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(1, 0.37254903, 0.12156863, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=2123288569]
+position = Vector2(577.5, 617.5)
+shape = SubResource("RectangleShape2D_fc03w")
+
+[node name="Player" parent="." unique_id=493058757 instance=ExtResource("2_gi7k6")]
+position = Vector2(123, 479)
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=991431962]
+position = Vector2(797, -145)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=823440429]
+offset_top = 587.0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(1, 0.37254903, 0.12156863, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1070343881]
+position = Vector2(577.5, 617.5)
+shape = SubResource("RectangleShape2D_fc03w")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=1796285892]
+position = Vector2(968, -58)
+scale = Vector2(0.1569168, 0.62302536)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=698504890]
+offset_top = 587.0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(1, 0.37254903, 0.12156863, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=1799524073]
+position = Vector2(577.5, 617.5)
+shape = SubResource("RectangleShape2D_fc03w")
+
+[node name="Platform4" type="StaticBody2D" parent="." unique_id=1545737306]
+position = Vector2(594, -156)
+scale = Vector2(0.1569168, 0.62302536)
+
+[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=895248573]
+offset_top = 587.0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(1, 0.37254903, 0.12156863, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=1263973437]
+position = Vector2(577.5, 617.5)
+shape = SubResource("RectangleShape2D_fc03w")
+
+[node name="Platform5" type="StaticBody2D" parent="." unique_id=1693842517]
+position = Vector2(-860, -86.00001)
+scale = Vector2(0.9701944, 0.6926644)
+
+[node name="ColorRect" type="ColorRect" parent="Platform5" unique_id=1626269325]
+offset_top = 587.0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(1, 0.37254903, 0.12156863, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5" unique_id=1717189118]
+position = Vector2(577.5, 617.5)
+shape = SubResource("RectangleShape2D_fc03w")
