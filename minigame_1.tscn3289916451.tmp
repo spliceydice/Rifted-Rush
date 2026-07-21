@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://ckemy0upjpia0" path="res://player.tscn" id="2_gi7k6"]
 [ext_resource type="Texture2D" uid="uid://hvrob6ro1twl" path="res://star_collectible.png" id="3_0hvi2"]
 [ext_resource type="Script" uid="uid://s7jq72i373v" path="res://star.gd" id="3_r6gmb"]
-[ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="6_or1ld"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fc03w"]
 size = Vector2(1151, 63)
@@ -204,10 +203,6 @@ position = Vector2(762.388, 636.0414)
 scale = Vector2(4.697025, 4.697025)
 shape = SubResource("CircleShape2D_fc03w")
 
-[node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("6_or1ld")]
-position = Vector2(935, 27)
-scale = Vector2(1.6686541, 1.6686541)
-
-[connection signal="garlic_collected" from="Star" to="." method="garlic_collect"]
+[connection signal="garlic_collected" from="Star" to="Star" method="garlic_collect"]
 [connection signal="garlic_collected" from="Star2" to="." method="garlic_collect"]
 [connection signal="garlic_collected" from="Star3" to="." method="garlic_collect"]

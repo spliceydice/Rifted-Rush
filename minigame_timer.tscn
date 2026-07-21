@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://b8x1uvs0ls6uq"]
 
-[node name="minigame_timer" type="Node2D" unique_id=603328823]
+[ext_resource type="Script" uid="uid://1ycu83ylhggn" path="res://minigame_timer.gd" id="1_4ajrp"]
 
-[node name="timer" type="RichTextLabel" parent="." unique_id=1056204616]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="minigame_timer" type="Node2D" unique_id=603328823]
+scale = Vector2(1.0003278, 1.0003278)
+script = ExtResource("1_4ajrp")
+
+[node name="MinigameTimer" type="RichTextLabel" parent="." unique_id=1056204616]
+clip_contents = false
+offset_right = 213.7077
+offset_bottom = 106.95934
+scale = Vector2(2.0769231, 2.1309524)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 30
