@@ -11,18 +11,18 @@
 size = Vector2(1151, 63)
 
 [sub_resource type="Animation" id="Animation_r6gmb"]
-length = 0.001
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(726.94727, 599.88403)]
+"values": [Vector2(726.94727, 599.88403), Vector2(726.94727, 593.3098)]
 }
 
 [sub_resource type="Animation" id="Animation_wh6qq"]
@@ -38,7 +38,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(726.94727, 599.88403), Vector2(726.94727, 592.4885)]
+"values": [Vector2(726.94727, 599.88403), Vector2(726.94727, 621.24976)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_or1ld"]
@@ -132,22 +132,53 @@ color = Color(1, 0.37254903, 0.12156863, 1)
 position = Vector2(577.5, 617.5)
 shape = SubResource("RectangleShape2D_fc03w")
 
+[node name="Platform6" type="StaticBody2D" parent="." unique_id=386957483]
+position = Vector2(405.99997, -51.999996)
+rotation = 1.573916
+scale = Vector2(0.9701944, 0.6926644)
+
+[node name="ColorRect" type="ColorRect" parent="Platform6" unique_id=854883300]
+offset_top = 587.0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(1, 0.37254903, 0.12156863, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6" unique_id=1146217378]
+position = Vector2(577.5, 617.5)
+shape = SubResource("RectangleShape2D_fc03w")
+
+[node name="Platform7" type="StaticBody2D" parent="." unique_id=1992314439]
+position = Vector2(1600.0002, -94.00001)
+rotation = 1.5675526
+scale = Vector2(0.97019434, 0.6926644)
+
+[node name="ColorRect" type="ColorRect" parent="Platform7" unique_id=1855630851]
+offset_top = 587.0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(1, 0.37254903, 0.12156863, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7" unique_id=1263433281]
+position = Vector2(577.5, 617.5)
+shape = SubResource("RectangleShape2D_fc03w")
+
 [node name="Star" type="Node2D" parent="." unique_id=1489255807]
-position = Vector2(129.00003, -521)
+position = Vector2(129.00003, -539.00006)
 scale = Vector2(1.213293, 1.216902)
 script = ExtResource("3_r6gmb")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Star" unique_id=1554573560]
-root_node = NodePath("../Star")
-libraries/ = SubResource("AnimationLibrary_or1ld")
 
 [node name="Star" type="TextureRect" parent="Star" unique_id=2035205919]
 offset_left = 726.94727
 offset_top = 599.88403
 offset_right = 1170.9473
-offset_bottom = 1049.8857
+offset_bottom = 1049.8845
 scale = Vector2(0.16310138, 0.16310138)
 texture = ExtResource("3_0hvi2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Star" unique_id=1554573560]
+root_node = NodePath("../Star")
+libraries/ = SubResource("AnimationLibrary_or1ld")
+autoplay = &"floating"
 
 [node name="Area2D" type="Area2D" parent="Star" unique_id=23213310]
 
@@ -161,17 +192,18 @@ position = Vector2(-839, -267)
 scale = Vector2(1.213293, 1.216902)
 script = ExtResource("3_r6gmb")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Star2" unique_id=574028443]
-root_node = NodePath("../Star")
-libraries/ = SubResource("AnimationLibrary_or1ld")
-
 [node name="Star" type="TextureRect" parent="Star2" unique_id=389422185]
 offset_left = 726.94727
 offset_top = 599.88403
 offset_right = 1170.9473
-offset_bottom = 1049.8857
+offset_bottom = 1049.8845
 scale = Vector2(0.16310138, 0.16310138)
 texture = ExtResource("3_0hvi2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Star2" unique_id=574028443]
+root_node = NodePath("../Star")
+libraries/ = SubResource("AnimationLibrary_or1ld")
+autoplay = &"floating"
 
 [node name="Area2D" type="Area2D" parent="Star2" unique_id=1676953846]
 
@@ -185,17 +217,18 @@ position = Vector2(-850, -649.00006)
 scale = Vector2(1.213293, 1.216902)
 script = ExtResource("3_r6gmb")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Star3" unique_id=1264779592]
-root_node = NodePath("../Star")
-libraries/ = SubResource("AnimationLibrary_or1ld")
-
 [node name="Star" type="TextureRect" parent="Star3" unique_id=776300989]
 offset_left = 726.94727
 offset_top = 599.88403
 offset_right = 1170.9473
-offset_bottom = 1049.8857
+offset_bottom = 1049.8921
 scale = Vector2(0.16310138, 0.16310138)
 texture = ExtResource("3_0hvi2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Star3" unique_id=1264779592]
+root_node = NodePath("../Star")
+libraries/ = SubResource("AnimationLibrary_or1ld")
+autoplay = &"floating"
 
 [node name="Area2D" type="Area2D" parent="Star3" unique_id=326210076]
 
