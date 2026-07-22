@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b3tt1b1pd1t50"]
+
+[ext_resource type="Script" uid="uid://cl4o4fybji5qy" path="res://minigame_2.gd" id="1_3qiw4"]
+[ext_resource type="Texture2D" uid="uid://d15bjiuo23i4k" path="res://wario-ware-inc-minigame-mania-game-boy-advance-art-banner.jpg" id="1_5x31c"]
+[ext_resource type="Texture2D" uid="uid://hvrob6ro1twl" path="res://star_collectible.png" id="2_3qiw4"]
+[ext_resource type="Script" uid="uid://cmertw1202jfg" path="res://button.gd" id="3_gc66t"]
+[ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="4_n6gid"]
+
+[node name="minigame_2" type="Node2D" unique_id=1104409034]
+script = ExtResource("1_3qiw4")
+
+[node name="ScrollingBackgrund" type="Parallax2D" parent="." unique_id=27370654]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackgrund" unique_id=1256209799]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.5999762, 0.5999762)
+texture = ExtResource("1_5x31c")
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=550539383]
+offset_left = 51.999996
+offset_top = 246.99998
+offset_right = 496.0
+offset_bottom = 697.0
+scale = Vector2(0.44665918, 0.44665918)
+texture_normal = ExtResource("2_3qiw4")
+script = ExtResource("3_gc66t")
+
+[node name="Button_2" type="TextureButton" parent="." unique_id=461749064]
+offset_left = 913.99994
+offset_top = 434.0
+offset_right = 1358.0
+offset_bottom = 884.0
+scale = Vector2(0.44665918, 0.44665918)
+texture_normal = ExtResource("2_3qiw4")
+script = ExtResource("3_gc66t")
+
+[node name="Button_3" type="TextureButton" parent="." unique_id=1166477909]
+offset_left = 510.99997
+offset_top = 392.0
+offset_right = 955.0
+offset_bottom = 842.0
+scale = Vector2(0.44665918, 0.44665918)
+texture_normal = ExtResource("2_3qiw4")
+script = ExtResource("3_gc66t")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=1928325987]
+offset_left = 298.99997
+offset_top = 40.00003
+offset_right = 743.0
+offset_bottom = 490.00003
+scale = Vector2(0.44665918, 0.44665918)
+texture_normal = ExtResource("2_3qiw4")
+script = ExtResource("3_gc66t")
+
+[node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("4_n6gid")]
+position = Vector2(962.00006, 25)
+scale = Vector2(1.6714832, 1.6714832)
+
+[connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
+[connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
+[connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
+[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
