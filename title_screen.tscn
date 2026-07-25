@@ -1,20 +1,16 @@
 [gd_scene format=3 uid="uid://wn6vj121tjbt"]
 
 [ext_resource type="Script" uid="uid://cvl2j2he2k0gc" path="res://titlescene.gd" id="1_v6p8y"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uj3xc"]
-load_path = "res://.godot/imported/Free-Nature-Backgrounds-Pixel-Art4.png-7bcef269e16cd62c895b568becc313ce.ctex"
+[ext_resource type="Texture2D" uid="uid://d15bjiuo23i4k" path="res://wario-ware-inc-minigame-mania-game-boy-advance-art-banner.jpg" id="2_ak2if"]
 
 [node name="title_screen" type="Node2D" unique_id=1101970525]
 script = ExtResource("1_v6p8y")
 
-[node name="Background" type="TextureRect" parent="." unique_id=578470203]
-offset_left = -24.000002
-offset_top = -76.0
-offset_right = 1776.0
-offset_bottom = 1124.0
-scale = Vector2(0.66657126, 0.6670473)
-texture = SubResource("CompressedTexture2D_uj3xc")
+[node name="Background" type="TextureRect" parent="." unique_id=10304219]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.60002875, 0.5999147)
+texture = ExtResource("2_ak2if")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=644053995]
 clip_contents = false
@@ -34,10 +30,12 @@ anchor_left = 1.493
 anchor_top = -4.314
 anchor_right = 1.493
 anchor_bottom = -4.314
-offset_left = 410.0
-offset_top = 227.0
-offset_right = 722.0
-offset_bottom = 497.0
+offset_left = 356.0
+offset_top = 243.0
+offset_right = 668.0
+offset_bottom = 513.0
+scale = Vector2(1.3169551, 1.3169551)
+theme_override_constants/separation = 15
 
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=1909974234]
 layout_mode = 2

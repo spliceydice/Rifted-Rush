@@ -5,3 +5,5 @@ func _process(delta: float) -> void:
 	pass
 var minigames_done = 0
 var lives = 5
+var score = 0
+var tutorial = true

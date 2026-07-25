@@ -24,7 +24,7 @@ offset_left = 51.999996
 offset_top = 246.99998
 offset_right = 496.0
 offset_bottom = 697.0
-scale = Vector2(0.44665918, 0.44665918)
+scale = Vector2(0.32436645, 0.32436645)
 texture_normal = ExtResource("2_3qiw4")
 script = ExtResource("3_gc66t")
 
@@ -33,7 +33,7 @@ offset_left = 913.99994
 offset_top = 434.0
 offset_right = 1358.0
 offset_bottom = 884.0
-scale = Vector2(0.44665918, 0.44665918)
+scale = Vector2(0.2431023, 0.2431023)
 texture_normal = ExtResource("2_3qiw4")
 script = ExtResource("3_gc66t")
 
@@ -42,16 +42,16 @@ offset_left = 510.99997
 offset_top = 392.0
 offset_right = 955.0
 offset_bottom = 842.0
-scale = Vector2(0.44665918, 0.44665918)
+scale = Vector2(0.45950502, 0.45950502)
 texture_normal = ExtResource("2_3qiw4")
 script = ExtResource("3_gc66t")
 
 [node name="Button_4" type="TextureButton" parent="." unique_id=1928325987]
-offset_left = 298.99997
-offset_top = 40.00003
-offset_right = 743.0
-offset_bottom = 490.00003
-scale = Vector2(0.44665918, 0.44665918)
+offset_left = 329.0
+offset_top = 22.0
+offset_right = 773.0
+offset_bottom = 472.0
+scale = Vector2(0.5215618, 0.5215618)
 texture_normal = ExtResource("2_3qiw4")
 script = ExtResource("3_gc66t")
 
