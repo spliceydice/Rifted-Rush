@@ -1,6 +1,5 @@
 extends Node2D
 func _ready() -> void:
-	Global.tutorial = false
 	Global.lives = 5
 	Global.minigames_done = 0
 func _on_start_pressed() -> void:

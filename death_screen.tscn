@@ -1,3 +1,75 @@
 [gd_scene format=3 uid="uid://pi7bybjbyot3"]
 
+[ext_resource type="Script" uid="uid://ip7eqmo87cwn" path="res://death_screen.gd" id="1_6bi5g"]
+[ext_resource type="Texture2D" uid="uid://d15bjiuo23i4k" path="res://wario-ware-inc-minigame-mania-game-boy-advance-art-banner.jpg" id="1_if853"]
+
 [node name="death_screen" type="Node2D" unique_id=1826109733]
+script = ExtResource("1_6bi5g")
+
+[node name="Background" type="TextureRect" parent="." unique_id=113280322]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.60002875, 0.5999147)
+texture = ExtResource("1_if853")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1034365023]
+clip_contents = false
+offset_left = 271.00003
+offset_top = 41.0
+offset_right = 1331.0
+offset_bottom = 196.0
+scale = Vector2(0.64430535, 0.64430535)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 111
+text = "Tutorial Failed..."
+
+[node name="info" type="RichTextLabel" parent="." unique_id=47445919]
+clip_contents = false
+offset_left = 60.0
+offset_top = 160.99998
+offset_right = 13430.739
+offset_bottom = 3352.318
+scale = Vector2(0.07927759, 0.07927759)
+theme_override_colors/default_color = Color(0.13193879, 0.38968197, 0.61322224, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -20
+theme_override_constants/outline_size = 137
+theme_override_font_sizes/normal_font_size = 406
+text = "Unfortunately, you failed the tutorial. Here are some quick tips:
+- Take your time, thetimer feels intimidating but there's no pressure.
+- Control your movements carefully."
+
+[node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=1423088758]
+anchors_preset = -1
+anchor_left = 1.493
+anchor_top = -4.314
+anchor_right = 1.493
+anchor_bottom = -4.314
+offset_left = 119.0
+offset_top = 445.0
+offset_right = 811.50653
+offset_bottom = 504.2275
+scale = Vector2(1.3169551, 1.3169551)
+theme_override_constants/separation = 15
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=468156849]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "     Retry Tutorial      "
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=600432048]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "      Settings      "
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=2145854263]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "        Quit         ‎ 
+"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
