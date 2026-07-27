@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b0wn2nxdv7dk7" path="res://done_screen.gd" id="1_1p5v7"]
 [ext_resource type="Texture2D" uid="uid://d15bjiuo23i4k" path="res://wario-ware-inc-minigame-mania-game-boy-advance-art-banner.jpg" id="1_mioa6"]
-[ext_resource type="FontFile" uid="uid://o261rnid25wo" path="res://star-crush/Star Crush.ttf" id="3_5d8rp"]
 
 [node name="done_screen" type="Node2D" unique_id=719364769]
 script = ExtResource("1_1p5v7")
@@ -27,15 +26,14 @@ text = "Tutorial Complete!"
 [node name="info" type="RichTextLabel" parent="." unique_id=2044458698]
 clip_contents = false
 offset_left = 44.0
-offset_top = 160.99998
-offset_right = 13414.739
-offset_bottom = 3352.318
+offset_top = 144.0
+offset_right = 13603.948
+offset_bottom = 3600.2104
 scale = Vector2(0.07927759, 0.07927759)
 theme_override_colors/default_color = Color(0.13193879, 0.38968197, 0.61322224, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -20
 theme_override_constants/outline_size = 137
-theme_override_fonts/normal_font = ExtResource("3_5d8rp")
 theme_override_font_sizes/normal_font_size = 473
 text = "This tutorial should have made you familiar with the types of minigames you'll be playing in the actual game. As you progress through the game, timers will get shorter and levels will become more difficult. Remember, the quicker you beat a level, the higher the score you will have."
 
