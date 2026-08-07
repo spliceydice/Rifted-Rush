@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="2_ig5kc"]
 [ext_resource type="Texture2D" uid="uid://hnp0vjdiq2q5" path="res://Starry_night_star_1920x1080-ezgif.com-gif-to-sprite-converter.png" id="3_05l2w"]
 [ext_resource type="Texture2D" uid="uid://cg7rjthicy81c" path="res://rift-fotor-bg-remover-2026080622627.png" id="4_05l2w"]
+[ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="4_hafda"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("3_05l2w")
@@ -819,15 +820,19 @@ autoplay = "shooting1"
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=644053995]
 clip_contents = false
-offset_left = 489.0
-offset_top = 61.0
-offset_right = 1126.9296
-offset_bottom = 234.83841
+offset_left = 318.00003
+offset_top = 31.0
+offset_right = 966.6067
+offset_bottom = 349.5707
+scale = Vector2(1.221079, 1.221079)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 40
+theme_override_fonts/normal_font = ExtResource("4_hafda")
 theme_override_font_sizes/normal_font_size = 108
-text = "WarioWare"
+text = "Rifted
+Rush"
+horizontal_alignment = 2
 
 [node name="Start" type="Button" parent="." unique_id=1909974234]
 offset_left = 503.0
@@ -871,42 +876,12 @@ offset_bottom = 8.0
 
 [node name="TextureRect" type="TextureRect" parent="Rift" unique_id=1768274808]
 layout_mode = 0
-offset_left = 17.999996
-offset_top = 595.0
-offset_right = 1042.0
-offset_bottom = 1383.0
+offset_left = 112.000015
+offset_top = 544.00006
+offset_right = 1136.0
+offset_bottom = 1332.0
 rotation = -1.1638646
-scale = Vector2(0.3880627, 0.3880627)
-texture = ExtResource("4_05l2w")
-
-[node name="TextureRect2" type="TextureRect" parent="Rift" unique_id=1380404095]
-layout_mode = 0
-offset_left = 131.99998
-offset_top = 484.00006
-offset_right = 1156.0
-offset_bottom = 1272.0
-rotation = -1.1638646
-scale = Vector2(0.3880627, 0.3880627)
-texture = ExtResource("4_05l2w")
-
-[node name="TextureRect3" type="TextureRect" parent="Rift" unique_id=1995849512]
-layout_mode = 0
-offset_left = 186.99997
-offset_top = 527.0
-offset_right = 1211.0
-offset_bottom = 1315.0
-rotation = -0.76296175
-scale = Vector2(0.3880627, 0.3880627)
-texture = ExtResource("4_05l2w")
-
-[node name="TextureRect4" type="TextureRect" parent="Rift" unique_id=340985075]
-layout_mode = 0
-offset_left = 250.00002
-offset_top = 490.0
-offset_right = 1274.0
-offset_bottom = 1278.0
-rotation = -1.070817
-scale = Vector2(0.3880627, 0.3880627)
+scale = Vector2(0.5199619, 0.5199619)
 texture = ExtResource("4_05l2w")
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
