@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d1tk3xi631jt3"]
 
-[ext_resource type="Texture2D" uid="uid://d15bjiuo23i4k" path="res://wario-ware-inc-minigame-mania-game-boy-advance-art-banner.jpg" id="1_2n61g"]
 [ext_resource type="Script" uid="uid://dtox1h6ohfquu" path="res://minigame_1.gd" id="1_wh6qq"]
 [ext_resource type="PackedScene" uid="uid://ckemy0upjpia0" path="res://player.tscn" id="2_gi7k6"]
+[ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="2_or1ld"]
 [ext_resource type="Texture2D" uid="uid://hvrob6ro1twl" path="res://star_collectible.png" id="3_0hvi2"]
 [ext_resource type="Script" uid="uid://s7jq72i373v" path="res://star.gd" id="3_r6gmb"]
 [ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="6_or1ld"]
@@ -53,16 +53,21 @@ _data = {
 script = ExtResource("1_wh6qq")
 
 [node name="ScrollingBackgrund" type="Parallax2D" parent="." unique_id=524298262]
-repeat_size = Vector2(1000, 0)
-autoscroll = Vector2(100, 0)
+texture_filter = 1
+repeat_size = Vector2(0, 647.98)
+autoscroll = Vector2(0, 0.5)
 
 [node name="Background" type="TextureRect" parent="ScrollingBackgrund" unique_id=1189384432]
+texture_filter = 1
+offset_top = -6.0000005
 offset_right = 1920.0
-offset_bottom = 1080.0
+offset_bottom = 1084.0004
 scale = Vector2(0.5999762, 0.5999762)
-texture = ExtResource("1_2n61g")
+texture = ExtResource("2_or1ld")
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=1799438467]
+texture_filter = 1
+position = Vector2(-181, -219)
 
 [node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=977382174]
 offset_top = 587.0
@@ -78,6 +83,7 @@ shape = SubResource("RectangleShape2D_fc03w")
 position = Vector2(324, 480)
 
 [node name="Platform2" type="StaticBody2D" parent="." unique_id=991431962]
+texture_filter = 1
 position = Vector2(797, -145)
 
 [node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=823440429]
@@ -91,6 +97,7 @@ position = Vector2(577.5, 617.5)
 shape = SubResource("RectangleShape2D_fc03w")
 
 [node name="Platform3" type="StaticBody2D" parent="." unique_id=1796285892]
+texture_filter = 1
 position = Vector2(968, -58)
 scale = Vector2(0.1569168, 0.62302536)
 
@@ -105,6 +112,7 @@ position = Vector2(577.5, 617.5)
 shape = SubResource("RectangleShape2D_fc03w")
 
 [node name="Platform4" type="StaticBody2D" parent="." unique_id=1545737306]
+texture_filter = 1
 position = Vector2(594, -156)
 scale = Vector2(0.1569168, 0.62302536)
 
@@ -119,6 +127,7 @@ position = Vector2(577.5, 617.5)
 shape = SubResource("RectangleShape2D_fc03w")
 
 [node name="Platform5" type="StaticBody2D" parent="." unique_id=1693842517]
+texture_filter = 1
 position = Vector2(-860, -86.00001)
 scale = Vector2(0.9701944, 0.6926644)
 
@@ -133,6 +142,7 @@ position = Vector2(577.5, 617.5)
 shape = SubResource("RectangleShape2D_fc03w")
 
 [node name="Platform6" type="StaticBody2D" parent="." unique_id=386957483]
+texture_filter = 1
 position = Vector2(405.99997, -51.999996)
 rotation = 1.573916
 scale = Vector2(0.9701944, 0.6926644)
@@ -148,6 +158,7 @@ position = Vector2(577.5, 617.5)
 shape = SubResource("RectangleShape2D_fc03w")
 
 [node name="Platform7" type="StaticBody2D" parent="." unique_id=1992314439]
+texture_filter = 1
 position = Vector2(1600.0002, -94.00001)
 rotation = 1.5675526
 scale = Vector2(0.97019434, 0.6926644)
@@ -163,6 +174,7 @@ position = Vector2(577.5, 617.5)
 shape = SubResource("RectangleShape2D_fc03w")
 
 [node name="Star" type="Node2D" parent="." unique_id=1489255807]
+texture_filter = 1
 position = Vector2(129.00003, -539.00006)
 scale = Vector2(1.213293, 1.216902)
 script = ExtResource("3_r6gmb")
@@ -188,6 +200,7 @@ scale = Vector2(4.697025, 4.697025)
 shape = SubResource("CircleShape2D_fc03w")
 
 [node name="Star2" type="Node2D" parent="." unique_id=862371404]
+texture_filter = 1
 position = Vector2(-839, -267)
 scale = Vector2(1.213293, 1.216902)
 script = ExtResource("3_r6gmb")
@@ -213,6 +226,7 @@ scale = Vector2(4.697025, 4.697025)
 shape = SubResource("CircleShape2D_fc03w")
 
 [node name="Star3" type="Node2D" parent="." unique_id=561922948]
+texture_filter = 1
 position = Vector2(-850, -649.00006)
 scale = Vector2(1.213293, 1.216902)
 script = ExtResource("3_r6gmb")
