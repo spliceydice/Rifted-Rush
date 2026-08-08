@@ -1,22 +1,36 @@
 [gd_scene format=3 uid="uid://ckemy0upjpia0"]
 
-[ext_resource type="Texture2D" uid="uid://brn7n3h6xwogi" path="res://Adobe Express - file.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://bmyur8000q28b" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://n4k8bnqcwgu8" path="res://red-spacecraft.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://1yhxusxyutsj" path="res://red-spacecraft-down.png" id="3_sweqy"]
+[ext_resource type="Texture2D" uid="uid://cs3o10r5fj7mq" path="res://red-spacecraft-left.png" id="4_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://bwfuu45d10vlr" path="res://red-spacecraft-right.png" id="5_1jxqw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fc03w"]
-radius = 517.6534
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(20, 18.404045)
 
 [node name="Player" type="CharacterBody2D" unique_id=493058757]
+texture_filter = 1
 scale = Vector2(0.11791909, 0.11791909)
 script = ExtResource("1_onrkg")
+texture_up = ExtResource("2_onrkg")
+texture_down = ExtResource("3_sweqy")
+texture_left = ExtResource("4_2hs0m")
+texture_right = ExtResource("5_1jxqw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1479625662]
-texture = ExtResource("1_4flbx")
+position = Vector2(0, -59.362736)
+scale = Vector2(30.957138, 30.957138)
+texture = ExtResource("2_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=477513384]
-shape = SubResource("CircleShape2D_fc03w")
+position = Vector2(0, -55.122547)
+scale = Vector2(40.632908, 41.010265)
+shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=321710976]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=115336293]
-shape = SubResource("CircleShape2D_fc03w")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=724852536]
+position = Vector2(0, -55.122547)
+scale = Vector2(40.632908, 41.010265)
+shape = SubResource("RectangleShape2D_onrkg")
