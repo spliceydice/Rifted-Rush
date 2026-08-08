@@ -67,7 +67,7 @@ texture = ExtResource("2_or1ld")
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=1799438467]
 texture_filter = 1
-position = Vector2(-181, -219)
+position = Vector2(-745, -240)
 
 [node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=977382174]
 offset_top = 587.0
@@ -84,7 +84,7 @@ position = Vector2(324, 480)
 
 [node name="Platform2" type="StaticBody2D" parent="." unique_id=991431962]
 texture_filter = 1
-position = Vector2(797, -145)
+position = Vector2(803, -26)
 
 [node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=823440429]
 offset_top = 587.0
