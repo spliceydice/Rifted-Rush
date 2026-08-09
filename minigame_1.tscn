@@ -4,11 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://ckemy0upjpia0" path="res://player.tscn" id="2_gi7k6"]
 [ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="2_or1ld"]
 [ext_resource type="Texture2D" uid="uid://hvrob6ro1twl" path="res://star_collectible.png" id="3_0hvi2"]
+[ext_resource type="Texture2D" uid="uid://b3wreqshesfnm" path="res://tiles/wall.png" id="3_jife1"]
 [ext_resource type="Script" uid="uid://s7jq72i373v" path="res://star.gd" id="3_r6gmb"]
 [ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="6_or1ld"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fc03w"]
-size = Vector2(1151, 63)
+size = Vector2(504, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jife1"]
+size = Vector2(377.46274, 63)
 
 [sub_resource type="Animation" id="Animation_r6gmb"]
 loop_mode = 2
@@ -49,6 +53,18 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fc03w"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0dnv"]
+size = Vector2(1036.401, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlki2"]
+size = Vector2(1036.9092, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ighjx"]
+size = Vector2(583.0726, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_261h4"]
+size = Vector2(583.0726, 63)
+
 [node name="minigame_1" type="Node2D" unique_id=293914996]
 script = ExtResource("1_wh6qq")
 
@@ -67,115 +83,153 @@ texture = ExtResource("2_or1ld")
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=1799438467]
 texture_filter = 1
-position = Vector2(-745, -240)
+position = Vector2(-637.99994, -246.99998)
+scale = Vector2(1.1115389, 1.1115389)
 
-[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=977382174]
-offset_top = 587.0
-offset_right = 1151.0
-offset_bottom = 647.0
-color = Color(1, 0.37254903, 0.12156863, 1)
+[node name="Wall" type="TextureRect" parent="Platform1" unique_id=1299555771]
+offset_left = 574.1205
+offset_top = 585.56464
+offset_right = 700.1205
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall2" type="TextureRect" parent="Platform1" unique_id=716698389]
+offset_left = 700.0071
+offset_top = 585.56464
+offset_right = 826.0071
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall3" type="TextureRect" parent="Platform1" unique_id=549923238]
+offset_left = 825.89417
+offset_top = 585.5646
+offset_right = 951.89417
+offset_bottom = 648.5646
+texture = ExtResource("3_jife1")
+
+[node name="Wall4" type="TextureRect" parent="Platform1" unique_id=911960641]
+offset_left = 951.78107
+offset_top = 585.56464
+offset_right = 1077.7813
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=2123288569]
-position = Vector2(577.5, 617.5)
+position = Vector2(826.37085, 617.5)
+shape = SubResource("RectangleShape2D_fc03w")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=1211130585]
+texture_filter = 1
+position = Vector2(1577, -270)
+rotation = 1.5707964
+scale = Vector2(1.1115389, 1.1115389)
+
+[node name="Wall" type="TextureRect" parent="Platform2" unique_id=22712683]
+offset_left = 574.1205
+offset_top = 585.56464
+offset_right = 700.1205
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall2" type="TextureRect" parent="Platform2" unique_id=613213669]
+offset_left = 700.0071
+offset_top = 585.56464
+offset_right = 826.0071
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall3" type="TextureRect" parent="Platform2" unique_id=572583291]
+offset_left = 825.89417
+offset_top = 585.5646
+offset_right = 951.89417
+offset_bottom = 648.5646
+texture = ExtResource("3_jife1")
+
+[node name="Wall4" type="TextureRect" parent="Platform2" unique_id=1915813589]
+offset_left = 951.78107
+offset_top = 585.56464
+offset_right = 1077.7813
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=735019681]
+position = Vector2(826.37085, 617.5)
+shape = SubResource("RectangleShape2D_fc03w")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=36155579]
+texture_filter = 1
+position = Vector2(-413.99997, -490)
+scale = Vector2(1.1115389, 1.1115389)
+
+[node name="Wall" type="TextureRect" parent="Platform3" unique_id=1603317080]
+offset_left = 574.1205
+offset_top = 585.56464
+offset_right = 700.1205
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall2" type="TextureRect" parent="Platform3" unique_id=1958506408]
+offset_left = 700.0071
+offset_top = 585.56464
+offset_right = 826.0071
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall3" type="TextureRect" parent="Platform3" unique_id=1483693781]
+offset_left = 825.89417
+offset_top = 585.5646
+offset_right = 951.89417
+offset_bottom = 648.5646
+texture = ExtResource("3_jife1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=1583509875]
+position = Vector2(763.1022, 617.4999)
+shape = SubResource("RectangleShape2D_jife1")
+
+[node name="Platform4" type="StaticBody2D" parent="." unique_id=1118334013]
+texture_filter = 1
+position = Vector2(-426.99997, 798.99994)
+rotation = 4.712389
+scale = Vector2(1.1115389, 1.1115389)
+
+[node name="Wall" type="TextureRect" parent="Platform4" unique_id=370983717]
+offset_left = 574.1205
+offset_top = 585.56464
+offset_right = 700.1205
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall2" type="TextureRect" parent="Platform4" unique_id=394868732]
+offset_left = 700.0071
+offset_top = 585.56464
+offset_right = 826.0071
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall3" type="TextureRect" parent="Platform4" unique_id=1127262029]
+offset_left = 825.89417
+offset_top = 585.5646
+offset_right = 951.89417
+offset_bottom = 648.5646
+texture = ExtResource("3_jife1")
+
+[node name="Wall4" type="TextureRect" parent="Platform4" unique_id=1179297934]
+offset_left = 951.78107
+offset_top = 585.56464
+offset_right = 1077.7813
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=701249843]
+position = Vector2(826.37085, 617.5)
 shape = SubResource("RectangleShape2D_fc03w")
 
 [node name="Player" parent="." unique_id=493058757 instance=ExtResource("2_gi7k6")]
-position = Vector2(324, 480)
-
-[node name="Platform2" type="StaticBody2D" parent="." unique_id=991431962]
-texture_filter = 1
-position = Vector2(803, -26)
-
-[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=823440429]
-offset_top = 587.0
-offset_right = 1151.0
-offset_bottom = 647.0
-color = Color(1, 0.37254903, 0.12156863, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1070343881]
-position = Vector2(577.5, 617.5)
-shape = SubResource("RectangleShape2D_fc03w")
-
-[node name="Platform3" type="StaticBody2D" parent="." unique_id=1796285892]
-texture_filter = 1
-position = Vector2(968, -58)
-scale = Vector2(0.1569168, 0.62302536)
-
-[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=698504890]
-offset_top = 587.0
-offset_right = 1151.0
-offset_bottom = 647.0
-color = Color(1, 0.37254903, 0.12156863, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=1799524073]
-position = Vector2(577.5, 617.5)
-shape = SubResource("RectangleShape2D_fc03w")
-
-[node name="Platform4" type="StaticBody2D" parent="." unique_id=1545737306]
-texture_filter = 1
-position = Vector2(594, -156)
-scale = Vector2(0.1569168, 0.62302536)
-
-[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=895248573]
-offset_top = 587.0
-offset_right = 1151.0
-offset_bottom = 647.0
-color = Color(1, 0.37254903, 0.12156863, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=1263973437]
-position = Vector2(577.5, 617.5)
-shape = SubResource("RectangleShape2D_fc03w")
-
-[node name="Platform5" type="StaticBody2D" parent="." unique_id=1693842517]
-texture_filter = 1
-position = Vector2(-860, -86.00001)
-scale = Vector2(0.9701944, 0.6926644)
-
-[node name="ColorRect" type="ColorRect" parent="Platform5" unique_id=1626269325]
-offset_top = 587.0
-offset_right = 1151.0
-offset_bottom = 647.0
-color = Color(1, 0.37254903, 0.12156863, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5" unique_id=1717189118]
-position = Vector2(577.5, 617.5)
-shape = SubResource("RectangleShape2D_fc03w")
-
-[node name="Platform6" type="StaticBody2D" parent="." unique_id=386957483]
-texture_filter = 1
-position = Vector2(405.99997, -51.999996)
-rotation = 1.573916
-scale = Vector2(0.9701944, 0.6926644)
-
-[node name="ColorRect" type="ColorRect" parent="Platform6" unique_id=854883300]
-offset_top = 587.0
-offset_right = 1151.0
-offset_bottom = 647.0
-color = Color(1, 0.37254903, 0.12156863, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6" unique_id=1146217378]
-position = Vector2(577.5, 617.5)
-shape = SubResource("RectangleShape2D_fc03w")
-
-[node name="Platform7" type="StaticBody2D" parent="." unique_id=1992314439]
-texture_filter = 1
-position = Vector2(1600.0002, -94.00001)
-rotation = 1.5675526
-scale = Vector2(0.97019434, 0.6926644)
-
-[node name="ColorRect" type="ColorRect" parent="Platform7" unique_id=1855630851]
-offset_top = 587.0
-offset_right = 1151.0
-offset_bottom = 647.0
-color = Color(1, 0.37254903, 0.12156863, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7" unique_id=1263433281]
-position = Vector2(577.5, 617.5)
-shape = SubResource("RectangleShape2D_fc03w")
+position = Vector2(94.000015, 570)
 
 [node name="Star" type="Node2D" parent="." unique_id=1489255807]
 texture_filter = 1
-position = Vector2(129.00003, -539.00006)
+position = Vector2(-547.00006, -696.00006)
 scale = Vector2(1.213293, 1.216902)
 script = ExtResource("3_r6gmb")
 
@@ -201,7 +255,7 @@ shape = SubResource("CircleShape2D_fc03w")
 
 [node name="Star2" type="Node2D" parent="." unique_id=862371404]
 texture_filter = 1
-position = Vector2(-839, -267)
+position = Vector2(110.00001, -249)
 scale = Vector2(1.213293, 1.216902)
 script = ExtResource("3_r6gmb")
 
@@ -227,7 +281,7 @@ shape = SubResource("CircleShape2D_fc03w")
 
 [node name="Star3" type="Node2D" parent="." unique_id=561922948]
 texture_filter = 1
-position = Vector2(-850, -649.00006)
+position = Vector2(-825, -688)
 scale = Vector2(1.213293, 1.216902)
 script = ExtResource("3_r6gmb")
 
@@ -254,6 +308,172 @@ shape = SubResource("CircleShape2D_fc03w")
 [node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("6_or1ld")]
 position = Vector2(935, 27)
 scale = Vector2(1.6686541, 1.6686541)
+
+[node name="Platform5" type="StaticBody2D" parent="." unique_id=2006284162]
+texture_filter = 1
+position = Vector2(-638, -4)
+scale = Vector2(1.1115389, 1.1115389)
+
+[node name="Wall" type="TextureRect" parent="Platform5" unique_id=1312049540]
+visible = false
+offset_left = 574.1205
+offset_top = 585.56464
+offset_right = 700.1205
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall2" type="TextureRect" parent="Platform5" unique_id=546933324]
+visible = false
+offset_left = 700.0071
+offset_top = 585.56464
+offset_right = 826.0071
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall3" type="TextureRect" parent="Platform5" unique_id=680037170]
+visible = false
+offset_left = 825.89417
+offset_top = 585.5646
+offset_right = 951.89417
+offset_bottom = 648.5646
+texture = ExtResource("3_jife1")
+
+[node name="Wall4" type="TextureRect" parent="Platform5" unique_id=1632168295]
+visible = false
+offset_left = 951.78107
+offset_top = 585.56464
+offset_right = 1077.7813
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5" unique_id=4990044]
+position = Vector2(1092.1794, 617.5)
+shape = SubResource("RectangleShape2D_s0dnv")
+
+[node name="Platform6" type="StaticBody2D" parent="." unique_id=1243166653]
+texture_filter = 1
+position = Vector2(-637, -722)
+scale = Vector2(1.1115389, 1.1115389)
+
+[node name="Wall" type="TextureRect" parent="Platform6" unique_id=740765023]
+visible = false
+offset_left = 574.1205
+offset_top = 585.56464
+offset_right = 700.1205
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall2" type="TextureRect" parent="Platform6" unique_id=1896760062]
+visible = false
+offset_left = 700.0071
+offset_top = 585.56464
+offset_right = 826.0071
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall3" type="TextureRect" parent="Platform6" unique_id=413674713]
+visible = false
+offset_left = 825.89417
+offset_top = 585.5646
+offset_right = 951.89417
+offset_bottom = 648.5646
+texture = ExtResource("3_jife1")
+
+[node name="Wall4" type="TextureRect" parent="Platform6" unique_id=1203337979]
+visible = false
+offset_left = 951.78107
+offset_top = 585.56464
+offset_right = 1077.7813
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6" unique_id=813886785]
+position = Vector2(1091.0259, 618.39966)
+shape = SubResource("RectangleShape2D_vlki2")
+
+[node name="Platform7" type="StaticBody2D" parent="." unique_id=678302148]
+texture_filter = 1
+position = Vector2(-637.99994, -246.99998)
+scale = Vector2(1.1115389, 1.1115389)
+
+[node name="Wall" type="TextureRect" parent="Platform7" unique_id=688523528]
+visible = false
+offset_left = 574.1205
+offset_top = 585.56464
+offset_right = 700.1205
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall2" type="TextureRect" parent="Platform7" unique_id=1857189477]
+visible = false
+offset_left = 700.0071
+offset_top = 585.56464
+offset_right = 826.0071
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall3" type="TextureRect" parent="Platform7" unique_id=1322700811]
+visible = false
+offset_left = 825.89417
+offset_top = 585.5646
+offset_right = 951.89417
+offset_bottom = 648.5646
+texture = ExtResource("3_jife1")
+
+[node name="Wall4" type="TextureRect" parent="Platform7" unique_id=597784122]
+visible = false
+offset_left = 951.78107
+offset_top = 585.56464
+offset_right = 1077.7813
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7" unique_id=64236808]
+position = Vector2(542.491, 513.6537)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ighjx")
+
+[node name="Platform8" type="StaticBody2D" parent="." unique_id=441731964]
+texture_filter = 1
+position = Vector2(-637.99994, -246.99998)
+scale = Vector2(1.1115389, 1.1115389)
+
+[node name="Wall" type="TextureRect" parent="Platform8" unique_id=1886463151]
+visible = false
+offset_left = 574.1205
+offset_top = 585.56464
+offset_right = 700.1205
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall2" type="TextureRect" parent="Platform8" unique_id=1071411744]
+visible = false
+offset_left = 700.0071
+offset_top = 585.56464
+offset_right = 826.0071
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="Wall3" type="TextureRect" parent="Platform8" unique_id=1659829001]
+visible = false
+offset_left = 825.89417
+offset_top = 585.5646
+offset_right = 951.89417
+offset_bottom = 648.5646
+texture = ExtResource("3_jife1")
+
+[node name="Wall4" type="TextureRect" parent="Platform8" unique_id=1199965457]
+visible = false
+offset_left = 951.78107
+offset_top = 585.56464
+offset_right = 1077.7813
+offset_bottom = 648.56464
+texture = ExtResource("3_jife1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform8" unique_id=1743714306]
+position = Vector2(1641.8677, 513.6537)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_261h4")
 
 [connection signal="garlic_collected" from="Star" to="." method="garlic_collect"]
 [connection signal="garlic_collected" from="Star2" to="." method="garlic_collect"]
