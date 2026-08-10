@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtox1h6ohfquu" path="res://minigame_1.gd" id="1_wh6qq"]
 [ext_resource type="PackedScene" uid="uid://ckemy0upjpia0" path="res://player.tscn" id="2_gi7k6"]
-[ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="2_or1ld"]
+[ext_resource type="Texture2D" uid="uid://dafv842berqip" path="res://space-backgrounds 1080p/Space BG_1-3_1920x1080.png" id="2_jife1"]
 [ext_resource type="Texture2D" uid="uid://hvrob6ro1twl" path="res://star_collectible.png" id="3_0hvi2"]
 [ext_resource type="Texture2D" uid="uid://b3wreqshesfnm" path="res://tiles/wall.png" id="3_jife1"]
 [ext_resource type="Script" uid="uid://s7jq72i373v" path="res://star.gd" id="3_r6gmb"]
@@ -71,7 +71,7 @@ script = ExtResource("1_wh6qq")
 [node name="ScrollingBackgrund" type="Parallax2D" parent="." unique_id=524298262]
 texture_filter = 1
 repeat_size = Vector2(0, 647.98)
-autoscroll = Vector2(0, 0.5)
+autoscroll = Vector2(0, 50)
 
 [node name="Background" type="TextureRect" parent="ScrollingBackgrund" unique_id=1189384432]
 texture_filter = 1
@@ -79,7 +79,7 @@ offset_top = -6.0000005
 offset_right = 1920.0
 offset_bottom = 1084.0004
 scale = Vector2(0.5999762, 0.5999762)
-texture = ExtResource("2_or1ld")
+texture = ExtResource("2_jife1")
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=1799438467]
 texture_filter = 1

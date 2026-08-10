@@ -7,12 +7,18 @@ extends Node2D
 @onready var garlic_5: TextureRect = $GarlicContainer/Garlic5
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
+@onready var player: CharacterBody2D = $Player
 
 var time
 
 func _ready() -> void:
+	if Global.minigames_done == 0:
+		player.visible = true
+		$Container.activate_fade_mode()
+	else:
+		$Container.visible = false
+		player.visible = false
 	await Timer(5.0) # using the function created
-	
 	if Global.minigames_done < 3: # if you havent completed 3 minigames yet 
 		Global.minigames_done = Global.minigames_done +1
 		get_tree().change_scene_to_file("res://minigame_" + str(Global.minigames_done) + ".tscn") # changes your scene by arranging this frankenstein path. 
@@ -23,7 +29,6 @@ func _ready() -> void:
 # should be next. Make sure you name your minigame saves appropriately.
 	else:
 		get_tree().change_scene_to_file("res://title_screen.tscn") # changes your scene
-	
 
 func _process(delta: float) -> void: # runs EVERY FRAME
 	match Global.lives: # asks or checks if lives is equal to one of 
@@ -48,6 +53,7 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
 	level.text = "Level " + str(Global.minigames_done + 1) # this tells you want minigame you're on using concatenation (google the word yo)
+	
 func Timer(start_time: float): # making a new function for timer countdown!
 	# we want the timer to go down, and when it reaches 0 it transitions 
 	# to the next scene!
