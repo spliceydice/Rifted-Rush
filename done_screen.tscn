@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b0wn2nxdv7dk7" path="res://done_screen.gd" id="1_1p5v7"]
 [ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="2_1p5v7"]
+[ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="3_5d8rp"]
 
 [node name="done_screen" type="Node2D" unique_id=719364769]
 script = ExtResource("1_1p5v7")
@@ -14,21 +15,22 @@ texture = ExtResource("2_1p5v7")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=1493766107]
 clip_contents = false
-offset_left = 245.00002
-offset_top = 41.0
-offset_right = 1305.0
-offset_bottom = 196.0
-scale = Vector2(0.64430535, 0.64430535)
+offset_left = 146.0
+offset_top = 30.0
+offset_right = 1206.0
+offset_bottom = 185.0
+scale = Vector2(0.861812, 0.861812)
 theme_override_constants/outline_size = 40
+theme_override_fonts/normal_font = ExtResource("3_5d8rp")
 theme_override_font_sizes/normal_font_size = 111
 text = "Tutorial Complete!"
 
 [node name="info" type="RichTextLabel" parent="." unique_id=2044458698]
 clip_contents = false
 offset_left = 44.0
-offset_top = 144.0
+offset_top = 162.0
 offset_right = 13603.948
-offset_bottom = 3600.2104
+offset_bottom = 3618.2104
 scale = Vector2(0.07927759, 0.07927759)
 theme_override_colors/default_color = Color(0.13193879, 0.38968197, 0.61322224, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -43,29 +45,35 @@ anchor_left = 1.493
 anchor_top = -4.314
 anchor_right = 1.493
 anchor_bottom = -4.314
-offset_left = 119.0
+offset_left = 43.0
 offset_top = 445.0
-offset_right = 811.50653
+offset_right = 841.0
 offset_bottom = 504.2275
 scale = Vector2(1.3169551, 1.3169551)
 theme_override_constants/separation = 15
 
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=1034945219]
+texture_filter = 1
 layout_mode = 2
 theme_override_constants/outline_size = 14
-theme_override_font_sizes/font_size = 26
-text = "     Retry Tutorial      "
+theme_override_fonts/font = ExtResource("3_5d8rp")
+theme_override_font_sizes/font_size = 37
+text = "  Enter Freeplay   "
 
 [node name="Settings" type="Button" parent="VBoxContainer" unique_id=1004947742]
+texture_filter = 1
 layout_mode = 2
 theme_override_constants/outline_size = 14
-theme_override_font_sizes/font_size = 26
+theme_override_fonts/font = ExtResource("3_5d8rp")
+theme_override_font_sizes/font_size = 36
 text = "      Settings      "
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=539614956]
+texture_filter = 1
 layout_mode = 2
 theme_override_constants/outline_size = 14
-theme_override_font_sizes/font_size = 26
+theme_override_fonts/font = ExtResource("3_5d8rp")
+theme_override_font_sizes/font_size = 37
 text = "        Quit         ‎ 
 "
 

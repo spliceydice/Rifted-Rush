@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://pi7bybjbyot3"]
 
 [ext_resource type="Script" uid="uid://ip7eqmo87cwn" path="res://death_screen.gd" id="1_6bi5g"]
-[ext_resource type="Texture2D" uid="uid://d15bjiuo23i4k" path="res://wario-ware-inc-minigame-mania-game-boy-advance-art-banner.jpg" id="1_if853"]
+[ext_resource type="Texture2D" uid="uid://bswg0648jsp1t" path="res://space-backgrounds 1080p/Space BG_1-4_1920x1080.png" id="2_ex68u"]
+[ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="3_6bi5g"]
 
 [node name="death_screen" type="Node2D" unique_id=1826109733]
 script = ExtResource("1_6bi5g")
@@ -10,34 +11,34 @@ script = ExtResource("1_6bi5g")
 offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(0.60002875, 0.5999147)
-texture = ExtResource("1_if853")
+texture = ExtResource("2_ex68u")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=1034365023]
+texture_filter = 1
 clip_contents = false
-offset_left = 271.00003
-offset_top = 41.0
-offset_right = 1331.0
-offset_bottom = 196.0
-scale = Vector2(0.64430535, 0.64430535)
+offset_left = 107.0
+offset_top = 19.999998
+offset_right = 1167.0
+offset_bottom = 175.0
+scale = Vector2(1.0982418, 1.0982418)
 theme_override_constants/outline_size = 40
+theme_override_fonts/normal_font = ExtResource("3_6bi5g")
 theme_override_font_sizes/normal_font_size = 111
 text = "Tutorial Failed..."
 
 [node name="info" type="RichTextLabel" parent="." unique_id=47445919]
 clip_contents = false
 offset_left = 60.0
-offset_top = 160.99998
+offset_top = 170.0
 offset_right = 13430.739
-offset_bottom = 3352.318
+offset_bottom = 3361.318
 scale = Vector2(0.07927759, 0.07927759)
-theme_override_colors/default_color = Color(0.13193879, 0.38968197, 0.61322224, 1)
+theme_override_colors/default_color = Color(0.23084942, 0.11968429, 0.3754481, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -20
 theme_override_constants/outline_size = 137
-theme_override_font_sizes/normal_font_size = 406
-text = "Unfortunately, you failed the tutorial. Here are some quick tips:
-- Take your time, thetimer feels intimidating but there's no pressure.
-- Control your movements carefully."
+theme_override_font_sizes/normal_font_size = 491
+text = "yeah so you failed the tutorial bro... i'm still shocked about how one manages to fail such an easy tutorial bro :😭🙏 genuinely lock in. if I see you here again im not letting you play this game again at all 💀✌️"
 
 [node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=1423088758]
 anchors_preset = -1
@@ -72,4 +73,5 @@ text = "        Quit         ‎
 "
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
