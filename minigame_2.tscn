@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://cmertw1202jfg" path="res://button.gd" id="3_gc66t"]
 [ext_resource type="Texture2D" uid="uid://hnp0vjdiq2q5" path="res://Starry_night_star_1920x1080-ezgif.com-gif-to-sprite-converter.png" id="3_u32kt"]
 [ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="4_n6gid"]
+[ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="7_u32kt"]
+[ext_resource type="Script" uid="uid://b08y3c8al0o7r" path="res://click_popup.gd" id="8_v84ot"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("3_u32kt")
@@ -859,6 +861,21 @@ script = ExtResource("3_gc66t")
 [node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("4_n6gid")]
 position = Vector2(962.00006, 25)
 scale = Vector2(1.6714832, 1.6714832)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1684008418]
+texture_filter = 1
+offset_left = 294.0
+offset_top = 303.99997
+offset_right = 872.0
+offset_bottom = 524.0
+rotation = -0.3201834
+scale = Vector2(1.088135, 1.088135)
+mouse_filter = 2
+theme_override_constants/outline_size = 53
+theme_override_fonts/normal_font = ExtResource("7_u32kt")
+theme_override_font_sizes/normal_font_size = 164
+text = "CLICK!"
+script = ExtResource("8_v84ot")
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]

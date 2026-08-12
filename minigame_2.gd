@@ -5,6 +5,7 @@ var buttons_pressed := 0
 var timer_end = false
 
 func _ready() -> void:
+	$RichTextLabel.activate_fade_mode()
 	await themed_timer.Timer(4)
 	#after this is completed...
 	timer_end = true 
