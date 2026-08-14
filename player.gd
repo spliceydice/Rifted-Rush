@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 450.0
+@export var speed: float = 675.0
 
 @export var texture_up: Texture2D
 @export var texture_down: Texture2D
