@@ -28,16 +28,16 @@ text = "Tutorial Complete!"
 [node name="info" type="RichTextLabel" parent="." unique_id=2044458698]
 clip_contents = false
 offset_left = 44.0
-offset_top = 162.0
+offset_top = 184.0
 offset_right = 13603.948
-offset_bottom = 3618.2104
+offset_bottom = 3640.2104
 scale = Vector2(0.07927759, 0.07927759)
 theme_override_colors/default_color = Color(0.13193879, 0.38968197, 0.61322224, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -20
 theme_override_constants/outline_size = 137
-theme_override_font_sizes/normal_font_size = 473
-text = "This tutorial should have made you familiar with the types of minigames you'll be playing in the actual game. As you progress through the game, timers will get shorter and levels will become more difficult. Remember, the quicker you beat a level, the higher the score you will have."
+theme_override_font_sizes/normal_font_size = 504
+text = "Well Done! well, it took you long enough to beat the tutorial so how about you stay a little longer and play the freeplay mode! thanks for playing the tutorial!"
 
 [node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=292908299]
 anchors_preset = -1
