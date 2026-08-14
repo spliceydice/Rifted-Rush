@@ -20,5 +20,5 @@ func _unhandled_input(event: InputEvent) -> void:
 			# Lock input and start fading right here inline
 			can_fade = false 
 			var tween = create_tween()
-			tween.tween_property(self, "modulate:a", 0.0, 1.0)
+			tween.tween_property(self, "modulate:a", 0.0, 0.5)
 			tween.finished.connect(queue_free)

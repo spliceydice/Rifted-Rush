@@ -6,7 +6,7 @@ var timer_end = false
 
 func _ready() -> void:
 	$RichTextLabel.activate_fade_mode()
-	await themed_timer.Timer(4)
+	await themed_timer.Timer(3)
 	#after this is completed...
 	timer_end = true 
 
@@ -15,12 +15,8 @@ func _process(delta: float) -> void:
 
 		
 	if buttons_pressed == 4:
-		if Global.tutorial:
-			get_tree().change_scene_to_file("res://done_screen.tscn")
-			return
-		else:
-			get_tree().change_scene_to_file("res://timer_screen.tscn")
-			return
+		get_tree().change_scene_to_file("res://timer_screen.tscn")
+		return
 	
 	if timer_end:
 		Global.lives -= 1
