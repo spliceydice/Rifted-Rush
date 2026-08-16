@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="1_5xr8p"]
 [ext_resource type="Texture2D" uid="uid://hnp0vjdiq2q5" path="res://Starry_night_star_1920x1080-ezgif.com-gif-to-sprite-converter.png" id="2_33dbb"]
 [ext_resource type="Texture2D" uid="uid://bvebek7wmkykn" path="res://planets/Moon_Phase_1.png" id="3_5xr8p"]
+[ext_resource type="Texture2D" uid="uid://bxu5rrwddvtjc" path="res://force-field.png" id="4_cdg48"]
+[ext_resource type="Script" uid="uid://cq1tb5fpcrycn" path="res://shield.gd" id="5_1i1uu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_33dbb")
@@ -816,11 +818,29 @@ sprite_frames = SubResource("SpriteFrames_jqvox")
 animation = &"shooting1"
 autoplay = "shooting1"
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=47174626]
+[node name="moon" type="TextureRect" parent="." unique_id=47174626]
 texture_filter = 1
-offset_left = -574.0
-offset_top = 472.0
-offset_right = -446.0
-offset_bottom = 600.0
-scale = Vector2(17.97364, 17.97364)
+offset_left = 403.0
+offset_top = 469.00003
+offset_right = 531.0
+offset_bottom = 597.0
+scale = Vector2(2.841482, 2.841482)
 texture = ExtResource("3_5xr8p")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=245680974]
+
+[node name="shield" type="TextureRect" parent="Area2D" unique_id=191362119]
+texture_filter = 1
+anchors_preset = -1
+offset_left = 216.0
+offset_top = -200.0
+offset_right = 913.0
+offset_bottom = -8.0
+scale = Vector2(0.32775563, 0.33278438)
+pivot_offset = Vector2(375, 850)
+texture = ExtResource("4_cdg48")
+script = ExtResource("5_1i1uu")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1510448197]
+position = Vector2(583, 399)
+polygon = PackedVector2Array(-29, -32, 27, -32, 27, -24, 51, -24, 51, -16, 67, -16, 67, -8, 74, -8, 74, 0, 82, 0, 82, 8, 90, 8, 90, 16, 98, 16, 98, 24, 105, 24, 105, 32, -107, 32, -107, 24, -99, 24, -99, 16, -91, 16, -91, 8, -83, 8, -83, 0, -76, 0, -76, -8, -67, -8, -67, -16, -52, -16, -52, -24, -28, -24)
