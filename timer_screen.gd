@@ -13,11 +13,9 @@ var time
 
 func _ready() -> void:
 	if Global.minigames_done == 0:
-		player.visible = true
 		$Container.activate_fade_mode()
 	else:
 		$Container.visible = false
-		player.visible = false
 	await Timer(1.0) # using the function created
 	if Global.minigames_done < 4: # if you havent completed 3 minigames yet 
 		Global.minigames_done = Global.minigames_done +1
