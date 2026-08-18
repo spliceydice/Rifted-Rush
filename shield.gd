@@ -1,6 +1,6 @@
-extends TextureRect
+extends Area2D
 # decrease rotation step for scaling later
-@export var rotation_step: float = 20.0
+@export var rotation_step: float = 30.0
 
 func _unhandled_input(event) -> void:
 	if event is InputEventKey and event.pressed and not event.is_echo():
