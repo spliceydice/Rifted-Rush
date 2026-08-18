@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://hp6y5rq6mtp4"]
 
 [ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="1_5xr8p"]
+[ext_resource type="Script" uid="uid://dln2pce8ffwsj" path="res://minigame_3.gd" id="1_lpvao"]
 [ext_resource type="Texture2D" uid="uid://hnp0vjdiq2q5" path="res://Starry_night_star_1920x1080-ezgif.com-gif-to-sprite-converter.png" id="2_33dbb"]
 [ext_resource type="Texture2D" uid="uid://bvebek7wmkykn" path="res://planets/Moon_Phase_1.png" id="3_5xr8p"]
 [ext_resource type="Texture2D" uid="uid://bxu5rrwddvtjc" path="res://force-field.png" id="4_cdg48"]
 [ext_resource type="Script" uid="uid://cq1tb5fpcrycn" path="res://shield.gd" id="5_1i1uu"]
 [ext_resource type="Script" uid="uid://cpolbs7kjikf5" path="res://fireball_spawner.gd" id="6_1i1uu"]
+[ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="7_0abbc"]
+[ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="9_txmog"]
+[ext_resource type="Script" uid="uid://d35mdvq1pox7x" path="res://survive_popup.gd" id="10_8sil2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_33dbb")
@@ -784,6 +788,7 @@ animations = [{
 }]
 
 [node name="minigame_3" type="Node2D" unique_id=165435887]
+script = ExtResource("1_lpvao")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1732352066]
 texture_filter = 1
@@ -819,7 +824,9 @@ sprite_frames = SubResource("SpriteFrames_jqvox")
 animation = &"shooting1"
 autoplay = "shooting1"
 
-[node name="moon" type="TextureRect" parent="." unique_id=47174626]
+[node name="moon" type="Area2D" parent="." unique_id=1572657374]
+
+[node name="moon" type="TextureRect" parent="moon" unique_id=47174626]
 texture_filter = 1
 offset_left = 403.0
 offset_top = 469.00003
@@ -828,24 +835,29 @@ offset_bottom = 597.0
 scale = Vector2(2.841482, 2.841482)
 texture = ExtResource("3_5xr8p")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=245680974]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="moon" unique_id=1759677358]
+position = Vector2(519.2074, 598.2074)
+scale = Vector2(2.841482, 2.841482)
+polygon = PackedVector2Array(27.7294, -46.879547, 5.2059326, -43.71219, -18.373306, -31.04274, -33.154327, -11.6866455, -40.54483, 9.077164, -11.686661, 15.763824, 65.73773, 15.763824, 85.79768, 9.429092, 78.40718, -13.446289, 64.33002, -31.04274, 47.085495, -40.89676)
 
-[node name="shield" type="TextureRect" parent="Area2D" unique_id=191362119]
+[node name="shield" type="Area2D" parent="." unique_id=245680974 groups=["shield"]]
+position = Vector2(586, 649)
+script = ExtResource("5_1i1uu")
+
+[node name="shield img" type="TextureRect" parent="shield" unique_id=191362119]
 texture_filter = 1
 anchors_preset = -1
-offset_left = 216.0
-offset_top = -200.0
-offset_right = 913.0
-offset_bottom = -8.0
+offset_left = -375.39987
+offset_top = -848.8003
+offset_right = 321.60013
+offset_bottom = -656.8003
 scale = Vector2(0.32775563, 0.33278438)
 pivot_offset = Vector2(375, 850)
 texture = ExtResource("4_cdg48")
-script = ExtResource("5_1i1uu")
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1510448197]
-visible = false
-position = Vector2(583, 399)
-polygon = PackedVector2Array(-29, -32, 27, -32, 27, -24, 51, -24, 51, -16, 67, -16, 67, -8, 74, -8, 74, 0, 82, 0, 82, 8, 90, 8, 90, 16, 98, 16, 98, 24, 105, 24, 105, 32, -107, 32, -107, 24, -99, 24, -99, 16, -91, 16, -91, 8, -83, 8, -83, 0, -76, 0, -76, -8, -67, -8, -67, -16, -52, -16, -52, -24, -28, -24)
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="shield" unique_id=1510448197]
+position = Vector2(-45.563942, -247.57584)
+polygon = PackedVector2Array(-69.436035, 21.575836, -69.436035, 29.575836, -61.436035, 29.575836, -14.436035, -10.424164, -14.436035, -18.424164, 9.563965, -18.424164, 9.563965, -26.424164, 64.563965, -26.424164, 64.563965, -18.424164, 79.563965, -18.424164, 79.563965, -10.424164, 95.563965, -10.424164, 135.56396, 29.575836, 143.56396, 29.575836, 143.56396, 21.575836, 135.56396, 21.575836, 134.56396, 13.575836, 127.563965, 13.575836, 127.563965, 5.575836, 119.563965, 5.575836, 119.563965, -2.4241638, 111.563965, -2.4241638, 111.563965, -10.424164, 103.563965, -10.424164, 103.563965, -18.424164, 87.563965, -18.424164, 87.563965, -26.424164, 63.563965, -34.424164, 9.563965, -34.424164, -14.436035, -26.424164, -29.436035, -18.424164, -29.436035, -10.424164, -38.436035, -10.424164, -38.436035, -2.4241638, -46.436035, -2.4241638, -46.436035, 5.575836, -53.436035, 5.575836, -53.436035, 13.575836, -61.436035, 13.575836, -61.436035, 21.575836)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1082179423]
 
@@ -856,4 +868,24 @@ script = ExtResource("6_1i1uu")
 wait_time = 0.8
 autostart = true
 
+[node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("7_0abbc")]
+position = Vector2(900, 41)
+scale = Vector2(1.3975196, 1.3975196)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=200054016]
+texture_filter = 1
+offset_left = 36.999985
+offset_top = 240.99997
+offset_right = 751.7858
+offset_bottom = 461.0
+rotation = -0.3201834
+scale = Vector2(1.088135, 1.088135)
+mouse_filter = 2
+theme_override_constants/outline_size = 53
+theme_override_fonts/normal_font = ExtResource("9_txmog")
+theme_override_font_sizes/normal_font_size = 164
+text = "SURVIVE!"
+script = ExtResource("10_8sil2")
+
+[connection signal="area_entered" from="moon" to="." method="_on_moon_area_entered"]
 [connection signal="timeout" from="CanvasLayer/FireballSpawner/Timer" to="CanvasLayer/FireballSpawner" method="_on_timer_timeout"]
