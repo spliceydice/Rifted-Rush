@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c45enbu7tyrgh"]
+
+[ext_resource type="Texture2D" uid="uid://dwaxt6qktqxpd" path="res://FB00_nyknck/explosion/B500-2.PNG" id="1_j4sxf"]
+[ext_resource type="Texture2D" uid="uid://drquyohmxghaq" path="res://FB00_nyknck/explosion/B500-3.PNG" id="2_m5xho"]
+[ext_resource type="Texture2D" uid="uid://c1st065d7jbsv" path="res://FB00_nyknck/explosion/B500-4.PNG" id="3_kmxf7"]
+[ext_resource type="Script" uid="uid://co1epncvwpx26" path="res://explosion.gd" id="4_m5xho"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lk87q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j4sxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m5xho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kmxf7")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Explosion" type="AnimatedSprite2D" unique_id=817412516]
+scale = Vector2(0.33951643, 0.33951643)
+sprite_frames = SubResource("SpriteFrames_lk87q")
+autoplay = "default"
+frame = 2
+frame_progress = 1.0
+script = ExtResource("4_m5xho")

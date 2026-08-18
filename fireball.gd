@@ -1,7 +1,8 @@
 extends Area2D
 
-@export var min_speed: float = 300.0
-@export var max_speed: float = 475.0
+@export var explosion_scene: PackedScene
+@export var min_speed: float = 225.0
+@export var max_speed: float = 400.0
 
 var spawn_pos: Vector2
 var target_pos: Vector2
@@ -17,3 +18,15 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	position += velocity * delta
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("shield"):
+		spawn_explosion()
+		queue_free() 
+
+func spawn_explosion() -> void:
+	if explosion_scene:
+		var explosion_instance = explosion_scene.instantiate()
+		explosion_instance.global_position = $TipMarker.global_position
+		explosion_instance.global_rotation = global_rotation
+		get_tree().current_scene.add_child(explosion_instance)
