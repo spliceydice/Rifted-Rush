@@ -7,8 +7,6 @@ extends Node2D
 @onready var garlic_5: TextureRect = $GarlicContainer/Garlic5
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
-@onready var player: CharacterBody2D = $Player
-
 var time
 
 func _ready() -> void:
