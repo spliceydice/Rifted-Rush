@@ -1,0 +1,19 @@
+extends Area2D
+
+@export var min_speed: float = 300.0
+@export var max_speed: float = 475.0
+
+var spawn_pos: Vector2
+var target_pos: Vector2
+var velocity: Vector2 = Vector2.ZERO
+
+func _ready() -> void:
+	position = spawn_pos
+	
+	var direction = (target_pos - position).normalized()
+	var speed = randf_range(min_speed, max_speed)
+	velocity = direction * speed
+	look_at(target_pos)
+
+func _physics_process(delta: float) -> void:
+	position += velocity * delta

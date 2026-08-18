@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bvebek7wmkykn" path="res://planets/Moon_Phase_1.png" id="3_5xr8p"]
 [ext_resource type="Texture2D" uid="uid://bxu5rrwddvtjc" path="res://force-field.png" id="4_cdg48"]
 [ext_resource type="Script" uid="uid://cq1tb5fpcrycn" path="res://shield.gd" id="5_1i1uu"]
+[ext_resource type="Script" uid="uid://cpolbs7kjikf5" path="res://fireball_spawner.gd" id="6_1i1uu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_33dbb")
@@ -842,5 +843,17 @@ texture = ExtResource("4_cdg48")
 script = ExtResource("5_1i1uu")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1510448197]
+visible = false
 position = Vector2(583, 399)
 polygon = PackedVector2Array(-29, -32, 27, -32, 27, -24, 51, -24, 51, -16, 67, -16, 67, -8, 74, -8, 74, 0, 82, 0, 82, 8, 90, 8, 90, 16, 98, 16, 98, 24, 105, 24, 105, 32, -107, 32, -107, 24, -99, 24, -99, 16, -91, 16, -91, 8, -83, 8, -83, 0, -76, 0, -76, -8, -67, -8, -67, -16, -52, -16, -52, -24, -28, -24)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1082179423]
+
+[node name="FireballSpawner" type="Node2D" parent="CanvasLayer" unique_id=2006914062]
+script = ExtResource("6_1i1uu")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/FireballSpawner" unique_id=1308991258]
+wait_time = 0.8
+autostart = true
+
+[connection signal="timeout" from="CanvasLayer/FireballSpawner/Timer" to="CanvasLayer/FireballSpawner" method="_on_timer_timeout"]
