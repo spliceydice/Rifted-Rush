@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://1ycu83ylhggn" path="res://minigame_timer.gd" id="1_4ajrp"]
 
 [node name="minigame_timer" type="Node2D" unique_id=603328823]
-scale = Vector2(1.0003278, 1.0003278)
 script = ExtResource("1_4ajrp")
 
 [node name="MinigameTimer" type="RichTextLabel" parent="." unique_id=1056204616]
