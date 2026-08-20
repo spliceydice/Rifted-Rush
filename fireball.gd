@@ -1,8 +1,8 @@
 extends Area2D
 
 @export var explosion_scene: PackedScene
-@export var min_speed: float = 225.0
-@export var max_speed: float = 400.0
+@export var min_speed: float = 275.0
+@export var max_speed: float = 450.0
 
 var spawn_pos: Vector2
 var target_pos: Vector2
