@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="7_0abbc"]
 [ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="9_txmog"]
 [ext_resource type="Script" uid="uid://d35mdvq1pox7x" path="res://survive_popup.gd" id="10_8sil2"]
+[ext_resource type="Script" uid="uid://d3jd7kat4h0kq" path="res://shield-controls.gd" id="11_4v0ru"]
+[ext_resource type="Texture2D" uid="uid://pegbr47im16i" path="res://keys/ARROWLEFT.png" id="12_4v0ru"]
+[ext_resource type="Texture2D" uid="uid://cggsyasb5t57w" path="res://keys/ARROWRIGHT.png" id="13_iq1sh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_33dbb")
@@ -869,7 +872,7 @@ wait_time = 0.8
 autostart = true
 
 [node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("7_0abbc")]
-position = Vector2(900, 41)
+position = Vector2(960.99994, 35)
 scale = Vector2(1.3975196, 1.3975196)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=200054016]
@@ -886,6 +889,24 @@ theme_override_fonts/normal_font = ExtResource("9_txmog")
 theme_override_font_sizes/normal_font_size = 164
 text = "SURVIVE!"
 script = ExtResource("10_8sil2")
+
+[node name="controls" type="HBoxContainer" parent="." unique_id=1735581316]
+texture_filter = 1
+offset_left = 139.0
+offset_top = 450.99997
+offset_right = 232.0
+offset_bottom = 466.99997
+scale = Vector2(9.724809, 9.724809)
+theme_override_constants/separation = 59
+script = ExtResource("11_4v0ru")
+
+[node name="left arrow key" type="TextureRect" parent="controls" unique_id=1652902414]
+layout_mode = 2
+texture = ExtResource("12_4v0ru")
+
+[node name="right arrow key" type="TextureRect" parent="controls" unique_id=749105800]
+layout_mode = 2
+texture = ExtResource("13_iq1sh")
 
 [connection signal="area_entered" from="moon" to="." method="_on_moon_area_entered"]
 [connection signal="timeout" from="CanvasLayer/FireballSpawner/Timer" to="CanvasLayer/FireballSpawner" method="_on_timer_timeout"]

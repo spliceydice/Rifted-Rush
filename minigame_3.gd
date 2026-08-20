@@ -5,6 +5,7 @@ var timer_end = false
 
 func _ready() -> void:
 	$RichTextLabel.activate_fade_mode()
+	$controls.activate_fade_mode()
 	await minigame_timer.Timer(6.5) # scale this
 	#after this is completed...
 	timer_end = true 
