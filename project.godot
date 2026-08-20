@@ -27,6 +27,10 @@ window/stretch/mode="viewport"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+fireball=""
+
 [gui]
 
 theme/default_font_multichannel_signed_distance_field=true
