@@ -31,11 +31,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fc03w"]
-size = Vector2(21.036692, 16.829353)
+size = Vector2(16.303436, 11.570181)
 
 [node name="spamball" type="Area2D" unique_id=781481575 groups=["fireball"]]
 texture_filter = 1
 script = ExtResource("1_n37q2")
+min_speed = 255.0
+max_speed = 425.0
 accuracy_radius = 400.0
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=595532008]
@@ -44,7 +46,7 @@ sprite_frames = SubResource("SpriteFrames_fc03w")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=261437735]
-position = Vector2(20, -3.0000002)
+position = Vector2(18.5, -2.9999998)
 scale = Vector2(1.9014397, 1.9014397)
 shape = SubResource("RectangleShape2D_fc03w")
 

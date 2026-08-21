@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://dhku8jr47ixab"]
 
 [ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="1_c5c30"]
+[ext_resource type="Script" uid="uid://qxv0v1q3cyu0" path="res://minigame_4.gd" id="1_yanj6"]
 [ext_resource type="Texture2D" uid="uid://hnp0vjdiq2q5" path="res://Starry_night_star_1920x1080-ezgif.com-gif-to-sprite-converter.png" id="2_wae4i"]
 [ext_resource type="Script" uid="uid://brbhaqf8jfsgm" path="res://spamball_spawner.gd" id="3_yanj6"]
 [ext_resource type="PackedScene" uid="uid://ckemy0upjpia0" path="res://player.tscn" id="4_8qm3o"]
 [ext_resource type="Texture2D" uid="uid://b3wreqshesfnm" path="res://tiles/wall.png" id="5_wae4i"]
+[ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="7_8qm3o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_wae4i")
@@ -795,6 +797,7 @@ size = Vector2(583.0726, 63)
 size = Vector2(583.0726, 63)
 
 [node name="minigame_4" type="Node2D" unique_id=720924983]
+script = ExtResource("1_yanj6")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1858844998]
 texture_filter = 1
@@ -839,7 +842,7 @@ position = Vector2(581, 318)
 script = ExtResource("3_yanj6")
 
 [node name="Timer" type="Timer" parent="CanvasLayer/spamball_spawner" unique_id=1112687867]
-wait_time = 0.25
+wait_time = 0.29
 autostart = true
 
 [node name="Platform5" type="StaticBody2D" parent="." unique_id=1923418302]
@@ -1008,4 +1011,8 @@ position = Vector2(1641.8677, 513.6537)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_f4xpp")
 
+[node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("7_8qm3o")]
+position = Vector2(907, 28)
+
+[connection signal="player_area_entered" from="Player" to="." method="_on_player_player_area_entered"]
 [connection signal="timeout" from="CanvasLayer/spamball_spawner/Timer" to="CanvasLayer/spamball_spawner" method="_on_timer_timeout"]
