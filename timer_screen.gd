@@ -7,6 +7,7 @@ extends Node2D
 @onready var garlic_5: TextureRect = $GarlicContainer/Garlic5
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
+@onready var score_label: RichTextLabel = $Score
 var time
 var minigame_picked
 
@@ -59,6 +60,7 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 			garlic_container.hide() # just hides everything
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
+	score_label.text = "Score: " + str(Global.score)
 	if Global.tutorial:
 		level.text = "Level " + str(Global.minigames_done + 1) # this tells you want minigame you're on using concatenation (google the word yo)
 	else:

@@ -30,7 +30,7 @@ clip_contents = false
 offset_left = 44.0
 offset_top = 184.0
 offset_right = 13603.948
-offset_bottom = 3640.2104
+offset_bottom = 2353.5918
 scale = Vector2(0.07927759, 0.07927759)
 theme_override_colors/default_color = Color(0.13193879, 0.38968197, 0.61322224, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -40,15 +40,16 @@ theme_override_font_sizes/normal_font_size = 504
 text = "Well Done! well, it took you long enough to beat the tutorial so how about you stay a little longer and play the freeplay mode! thanks for playing the tutorial!"
 
 [node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=292908299]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 1.493
 anchor_top = -4.314
 anchor_right = 1.493
 anchor_bottom = -4.314
-offset_left = 43.0
-offset_top = 445.0
+offset_left = 43.000004
+offset_top = 483.00003
 offset_right = 841.0
-offset_bottom = 504.2275
+offset_bottom = 542.22754
 scale = Vector2(1.3169551, 1.3169551)
 theme_override_constants/separation = 15
 
@@ -76,6 +77,18 @@ theme_override_fonts/font = ExtResource("3_5d8rp")
 theme_override_font_sizes/font_size = 37
 text = "        Quit         ‎ 
 "
+
+[node name="Score" type="RichTextLabel" parent="." unique_id=1704497683]
+clip_contents = false
+offset_left = 389.0
+offset_top = 371.0
+offset_right = 648.0
+offset_bottom = 450.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 54
+theme_override_font_sizes/normal_font_size = 54
+text = "Score: "
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
