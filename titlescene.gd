@@ -9,3 +9,8 @@ func _on_quit_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	get_tree().change_scene_to_file("res://settings_screen.tscn") # Replace with function body.
+
+
+func _on_button_pressed() -> void:
+	Global.tutorial = false
+	$debug.visible = false

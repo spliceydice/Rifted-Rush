@@ -887,6 +887,14 @@ rotation = -1.1638646
 scale = Vector2(0.5561977, 0.5561977)
 texture = ExtResource("4_05l2w")
 
+[node name="debug" type="Button" parent="." unique_id=1843052848]
+offset_left = 979.0
+offset_top = 398.0
+offset_right = 1081.0
+offset_bottom = 429.0
+text = "skip tutorial"
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="debug" to="." method="_on_button_pressed"]
