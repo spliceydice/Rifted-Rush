@@ -1012,7 +1012,8 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_f4xpp")
 
 [node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("7_8qm3o")]
-position = Vector2(907, 28)
+position = Vector2(969, 21.999998)
+scale = Vector2(1.5021455, 1.5021455)
 
 [connection signal="player_area_entered" from="Player" to="." method="_on_player_player_area_entered"]
 [connection signal="timeout" from="CanvasLayer/spamball_spawner/Timer" to="CanvasLayer/spamball_spawner" method="_on_timer_timeout"]

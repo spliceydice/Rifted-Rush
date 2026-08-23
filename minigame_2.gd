@@ -6,7 +6,11 @@ var timer_end = false
 
 func _ready() -> void:
 	$RichTextLabel.activate_fade_mode()
-	await minigame_timer.Timer(3)
+	if Global.tutorial:
+		await minigame_timer.Timer(3)
+	else:
+		var t = Global.difficulty_t()
+		await minigame_timer.Timer(lerp(3.0, 1.6, t)) # SCALE!!!
 	#after this is completed...
 	timer_end = true 
 

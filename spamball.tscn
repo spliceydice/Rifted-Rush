@@ -37,7 +37,7 @@ size = Vector2(16.303436, 11.570181)
 texture_filter = 1
 script = ExtResource("1_n37q2")
 min_speed = 255.0
-max_speed = 425.0
+max_speed = 405.0
 accuracy_radius = 400.0
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=595532008]

@@ -10,6 +10,11 @@ var target_pos: Vector2
 var velocity: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
+	if not Global.tutorial:
+		var t = Global.difficulty_t()
+		min_speed = min_speed * lerp(1.0, 1.6, t) # SCALE!!!
+		max_speed = max_speed * lerp(1.0, 1.6, t) # SCALE!!!
+	
 	position = spawn_pos
 	var random_angle = randf_range(0, 2 * PI)
 	var random_distance = randf_range(0, accuracy_radius)
