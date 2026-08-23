@@ -26,8 +26,8 @@ func _ready() -> void:
 	timer_end = true # now we're saying "oh ye you ran out of time"
 
 func _process(delta: float) -> void: # running every frame brochacho
-	
 	if garlic_collected == 3:
+			Global.add_time_score(minigame_timer.time)
 			get_tree().change_scene_to_file("res://timer_screen.tscn") # go back to the intermission scene
 			return
 	if timer_end: # if the timer does end...

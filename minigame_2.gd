@@ -17,6 +17,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if buttons_pressed == 4:
+		Global.add_time_score(minigame_timer.time)
 		get_tree().change_scene_to_file("res://timer_screen.tscn")
 		return
 	
