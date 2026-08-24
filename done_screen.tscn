@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b0wn2nxdv7dk7" path="res://done_screen.gd" id="1_1p5v7"]
 [ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="2_1p5v7"]
 [ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="3_5d8rp"]
+[ext_resource type="FontFile" uid="uid://tv3hydgh31bd" path="res://press-start-2p-font/PressStart2P-vaV7.ttf" id="4_i8ovo"]
 
 [node name="done_screen" type="Node2D" unique_id=719364769]
 script = ExtResource("1_1p5v7")
@@ -15,29 +16,15 @@ texture = ExtResource("2_1p5v7")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=1493766107]
 clip_contents = false
-offset_left = 146.0
-offset_top = 30.0
-offset_right = 1206.0
+offset_left = 129.00002
+offset_top = 30.000002
+offset_right = 1189.0
 offset_bottom = 185.0
 scale = Vector2(0.861812, 0.861812)
 theme_override_constants/outline_size = 40
 theme_override_fonts/normal_font = ExtResource("3_5d8rp")
 theme_override_font_sizes/normal_font_size = 111
-text = "Tutorial Complete!"
-
-[node name="info" type="RichTextLabel" parent="." unique_id=2044458698]
-clip_contents = false
-offset_left = 44.0
-offset_top = 184.0
-offset_right = 13603.948
-offset_bottom = 2353.5918
-scale = Vector2(0.07927759, 0.07927759)
-theme_override_colors/default_color = Color(0.13193879, 0.38968197, 0.61322224, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = -20
-theme_override_constants/outline_size = 137
-theme_override_font_sizes/normal_font_size = 504
-text = "Well Done! well, it took you long enough to beat the tutorial so how about you stay a little longer and play the freeplay mode! thanks for playing the tutorial!"
+text = "Tutorial Completed!"
 
 [node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=292908299]
 texture_filter = 1
@@ -79,16 +66,30 @@ text = "        Quit         ‎
 "
 
 [node name="Score" type="RichTextLabel" parent="." unique_id=1704497683]
+texture_filter = 1
 clip_contents = false
-offset_left = 389.0
-offset_top = 371.0
-offset_right = 648.0
-offset_bottom = 450.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+offset_left = 73.0
+offset_top = 317.00003
+offset_right = 951.3008
+offset_bottom = 396.00006
+scale = Vector2(1.68, 1.68)
+theme_override_colors/default_color = Color(0.046064764, 0.7374445, 0.34935877, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 54
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("4_i8ovo")
 theme_override_font_sizes/normal_font_size = 54
 text = "Score: "
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=723870698]
+texture_filter = 1
+offset_left = 119.0
+offset_top = 178.0
+offset_right = 1034.0
+offset_bottom = 293.0
+theme_override_constants/outline_size = 21
+theme_override_fonts/normal_font = ExtResource("3_5d8rp")
+theme_override_font_sizes/normal_font_size = 45
+text = "trust me play the freeplay mode its way more fun (and much harder)"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
