@@ -12,6 +12,7 @@ var time
 var minigame_picked
 
 func _ready() -> void: 
+	$RichTextLabel.visible = false
 	if Global.tutorial:
 		if Global.minigames_done == 0:
 			$Container.activate_fade_mode()
@@ -35,7 +36,15 @@ func _ready() -> void:
 		options.erase(Global.last_minigame_picked)
 		minigame_picked = options[randi() % options.size()]
 		Global.last_minigame_picked = minigame_picked
-		await Timer(1.0)
+		if Global.minigames_done == 10:
+			$RichTextLabel.visible = true
+			$RichTextLabel.activate_fade_mode()
+		if Global.minigames_done >= 10:
+			$ScrollingBackgrund/Background.texture = load("res://space-backgrounds 1080p/Space BG_1-4_1920x1080.png")
+			$ScrollingBackgrund.autoscroll.x *= 1.5
+			await Timer(0.6)
+		else:
+			await Timer(1.0)
 		get_tree().change_scene_to_file("res://minigame_" + str(minigame_picked) + ".tscn")
 
 func _process(delta: float) -> void: # runs EVERY FRAME
@@ -60,7 +69,7 @@ func _process(delta: float) -> void: # runs EVERY FRAME
 			garlic_container.hide() # just hides everything
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
-	score_label.text = "Score: " + str(Global.score)
+	score_label.text = "Score:" + str(Global.score)
 	if Global.tutorial:
 		level.text = "Level " + str(Global.minigames_done + 1) # this tells you want minigame you're on using concatenation (google the word yo)
 	else:

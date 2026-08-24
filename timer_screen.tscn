@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://d0adxggahj4ne" path="res://keys/ARROWUP.png" id="8_vivli"]
 [ext_resource type="Texture2D" uid="uid://pegbr47im16i" path="res://keys/ARROWLEFT.png" id="9_45gtm"]
 [ext_resource type="Texture2D" uid="uid://dxmqtdxnhflmr" path="res://keys/ARROWDOWN.png" id="10_61tor"]
+[ext_resource type="FontFile" uid="uid://tv3hydgh31bd" path="res://press-start-2p-font/PressStart2P-vaV7.ttf" id="10_f6rmc"]
 [ext_resource type="Texture2D" uid="uid://cggsyasb5t57w" path="res://keys/ARROWRIGHT.png" id="11_18i6d"]
+[ext_resource type="Script" uid="uid://d35mdvq1pox7x" path="res://popup.gd" id="11_ieghi"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8wodn"]
 load_path = "res://.godot/imported/mc_hc_heart.png-018f4a0aefb337b0af65b9a84f6f2fab.ctex"
@@ -141,14 +143,32 @@ offset_right = 356.9997
 offset_bottom = 328.0
 texture = ExtResource("11_18i6d")
 
-[node name="Score" type="RichTextLabel" parent="." unique_id=1785728771]
+[node name="Score" type="RichTextLabel" parent="." unique_id=1980841810]
 clip_contents = false
-offset_left = 416.0
-offset_top = 263.0
-offset_right = 771.0
-offset_bottom = 342.0
+offset_left = 281.99997
+offset_top = 533.0
+offset_right = 1279.4875
+offset_bottom = 612.0
+scale = Vector2(0.796, 1.045)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 54
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("10_f6rmc")
 theme_override_font_sizes/normal_font_size = 54
-text = "Score: "
+text = "Score:"
+horizontal_alignment = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2000520725]
+texture_filter = 1
+offset_left = 234.0
+offset_top = 197.0
+offset_right = 1013.18774
+offset_bottom = 417.00003
+scale = Vector2(0.93302286, 0.93302286)
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 53
+theme_override_fonts/normal_font = ExtResource("7_2ajfq")
+theme_override_font_sizes/normal_font_size = 164
+text = "SPEED UP!"
+script = ExtResource("11_ieghi")
