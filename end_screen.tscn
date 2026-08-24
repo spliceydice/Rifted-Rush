@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="1_xu7hh"]
 [ext_resource type="Texture2D" uid="uid://hnp0vjdiq2q5" path="res://Starry_night_star_1920x1080-ezgif.com-gif-to-sprite-converter.png" id="2_pmjk2"]
 [ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="3_d75mr"]
+[ext_resource type="FontFile" uid="uid://tv3hydgh31bd" path="res://press-start-2p-font/PressStart2P-vaV7.ttf" id="4_pmjk2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_pmjk2")
@@ -843,9 +844,12 @@ theme_override_font_sizes/normal_font_size = 720
 text = "Your final score ends up to be: "
 
 [node name="Score" type="RichTextLabel" parent="." unique_id=370028925]
-offset_left = 381.0
+texture_filter = 1
+offset_left = 288.0
 offset_top = 335.0
-offset_right = 869.0
-offset_bottom = 375.0
-scale = Vector2(3.3939595, 3.3939595)
-text = "place holder"
+offset_right = 1177.0
+offset_bottom = 470.0
+scale = Vector2(1.9985771, 1.9985771)
+theme_override_fonts/normal_font = ExtResource("4_pmjk2")
+theme_override_font_sizes/normal_font_size = 69
+text = "0000"
