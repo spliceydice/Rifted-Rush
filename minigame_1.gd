@@ -28,17 +28,26 @@ func _ready() -> void:
 func _process(delta: float) -> void: # running every frame brochacho
 	if garlic_collected == 3:
 			Global.add_time_score(minigame_timer.time)
+			Global.score += Global.BASE_POINTS
 			get_tree().change_scene_to_file("res://timer_screen.tscn") # go back to the intermission scene
 			return
 	if timer_end: # if the timer does end...
-		Global.minigames_done -=1 #go back a minigame
 		Global.lives -= 1
-		if Global.lives == 0:
-			get_tree().change_scene_to_file("res://death_screen.tscn") # lose ur lives
-			return
+		Global.minigames_done -=1 #go back a minigame
+		if Global.tutorial:
+			if Global.lives == 0:
+				get_tree().change_scene_to_file("res://death_screen.tscn") # lose ur lives
+				return
+			else:
+				get_tree().change_scene_to_file("res://timer_screen.tscn") # back to intermission
+				return
 		else:
-			get_tree().change_scene_to_file("res://timer_screen.tscn") # back to intermission
-			return
+			if Global.lives == 0:
+				get_tree().change_scene_to_file("res://end_screen.tscn") # lose ur lives
+				return
+			else:
+				get_tree().change_scene_to_file("res://timer_screen.tscn") # back to intermission
+				return
 
 func garlic_collect() -> void: # cool function that you connect to those garlics
 	garlic_collected = garlic_collected +1

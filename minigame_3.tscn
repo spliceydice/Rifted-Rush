@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://cpolbs7kjikf5" path="res://fireball_spawner.gd" id="6_1i1uu"]
 [ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="7_0abbc"]
 [ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="9_txmog"]
-[ext_resource type="Script" uid="uid://d35mdvq1pox7x" path="res://survive_popup.gd" id="10_8sil2"]
+[ext_resource type="Script" uid="uid://d35mdvq1pox7x" path="res://popup.gd" id="10_8sil2"]
 [ext_resource type="Script" uid="uid://d3jd7kat4h0kq" path="res://shield-controls.gd" id="11_4v0ru"]
 [ext_resource type="Texture2D" uid="uid://pegbr47im16i" path="res://keys/ARROWLEFT.png" id="12_4v0ru"]
 [ext_resource type="Texture2D" uid="uid://cggsyasb5t57w" path="res://keys/ARROWRIGHT.png" id="13_iq1sh"]

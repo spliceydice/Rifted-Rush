@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ckemy0upjpia0" path="res://player.tscn" id="4_8qm3o"]
 [ext_resource type="Texture2D" uid="uid://b3wreqshesfnm" path="res://tiles/wall.png" id="5_wae4i"]
 [ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="7_8qm3o"]
+[ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="8_f4xpp"]
+[ext_resource type="Script" uid="uid://d35mdvq1pox7x" path="res://popup.gd" id="9_thd57"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_wae4i")
@@ -1014,6 +1016,21 @@ shape = SubResource("RectangleShape2D_f4xpp")
 [node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("7_8qm3o")]
 position = Vector2(969, 21.999998)
 scale = Vector2(1.5021455, 1.5021455)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=308611255]
+texture_filter = 1
+offset_left = 169.99995
+offset_top = 134.00002
+offset_right = 884.7858
+offset_bottom = 354.0
+rotation = -0.15588267
+scale = Vector2(1.169955, 1.169955)
+mouse_filter = 2
+theme_override_constants/outline_size = 53
+theme_override_fonts/normal_font = ExtResource("8_f4xpp")
+theme_override_font_sizes/normal_font_size = 164
+text = "DODGE!"
+script = ExtResource("9_thd57")
 
 [connection signal="player_area_entered" from="Player" to="." method="_on_player_player_area_entered"]
 [connection signal="timeout" from="CanvasLayer/spamball_spawner/Timer" to="CanvasLayer/spamball_spawner" method="_on_timer_timeout"]

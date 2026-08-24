@@ -4,6 +4,7 @@ extends Node2D
 var timer_end = false
 
 func _ready() -> void:
+	$RichTextLabel.activate_fade_mode()
 	$Player.scale *= 0.75
 	if Global.tutorial:
 		await minigame_timer.Timer(6.4) # scale this
@@ -29,8 +30,11 @@ func _on_player_player_area_entered(area: Variant) -> void:
 	Global.lives -= 1
 	Global.minigames_done -=1
 	if Global.lives == 0:
-		get_tree().change_scene_to_file("res://death_screen.tscn")
-		return
+		if Global.tutorial:
+			get_tree().change_scene_to_file("res://death_screen.tscn")
+			return
+		else:
+				get_tree().change_scene_to_file("res://end_screen.tscn")
 	else:
-		get_tree().call_deferred("change_scene_to_file", "res://timer_screen.tscn" )
+		get_tree().change_scene_to_file("res://timer_screen.tscn")
 		return

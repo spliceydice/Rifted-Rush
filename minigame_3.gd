@@ -24,8 +24,11 @@ func _on_moon_area_entered(area: Area2D) -> void:
 	Global.lives -= 1
 	Global.minigames_done -=1
 	if Global.lives == 0:
-		get_tree().change_scene_to_file("res://death_screen.tscn")
-		return
+		if Global.tutorial:
+			get_tree().change_scene_to_file("res://death_screen.tscn")
+			return
+		else:
+				get_tree().change_scene_to_file("res://end_screen.tscn")
 	else:
 		get_tree().change_scene_to_file("res://timer_screen.tscn")
 		return
