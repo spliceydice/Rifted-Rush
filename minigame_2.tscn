@@ -792,7 +792,7 @@ script = ExtResource("1_3qiw4")
 texture_filter = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
-scale = Vector2(0.60002875, 0.5999147)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_n6gid")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background" unique_id=703398158]
@@ -827,7 +827,7 @@ offset_left = 51.999996
 offset_top = 246.99998
 offset_right = 496.0
 offset_bottom = 697.0
-scale = Vector2(0.32436645, 0.32436645)
+scale = Vector2(0.444, 0.444)
 texture_normal = ExtResource("2_3qiw4")
 script = ExtResource("3_gc66t")
 
@@ -836,7 +836,7 @@ offset_left = 913.99994
 offset_top = 434.0
 offset_right = 1358.0
 offset_bottom = 884.0
-scale = Vector2(0.2431023, 0.2431023)
+scale = Vector2(0.442, 0.442)
 texture_normal = ExtResource("2_3qiw4")
 script = ExtResource("3_gc66t")
 
