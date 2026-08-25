@@ -41,7 +41,7 @@ func _ready() -> void:
 			$RichTextLabel.activate_fade_mode()
 		if Global.minigames_done >= 10:
 			$ScrollingBackgrund/Background.texture = load("res://space-backgrounds 1080p/Space BG_1-4_1920x1080.png")
-			$ScrollingBackgrund.autoscroll.x *= 1.5
+			$ScrollingBackgrund.autoscroll.x *= 2.5
 			await Timer(0.6)
 		else:
 			await Timer(1.0)
