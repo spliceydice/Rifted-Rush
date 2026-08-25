@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://i6rpdd7ekh2n"]
 
+[ext_resource type="Script" uid="uid://bjem4eart87st" path="res://end_screen.gd" id="1_d75mr"]
 [ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="1_xu7hh"]
 [ext_resource type="Texture2D" uid="uid://hnp0vjdiq2q5" path="res://Starry_night_star_1920x1080-ezgif.com-gif-to-sprite-converter.png" id="2_pmjk2"]
 [ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="3_d75mr"]
-[ext_resource type="FontFile" uid="uid://tv3hydgh31bd" path="res://press-start-2p-font/PressStart2P-vaV7.ttf" id="4_pmjk2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_pmjk2")
@@ -782,6 +782,7 @@ animations = [{
 }]
 
 [node name="end_screen" type="Node2D" unique_id=284295719]
+script = ExtResource("1_d75mr")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1900084147]
 texture_filter = 1
@@ -840,16 +841,73 @@ theme_override_colors/default_color = Color(0, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = -20
 theme_override_constants/outline_size = 256
+theme_override_fonts/normal_font = ExtResource("3_d75mr")
 theme_override_font_sizes/normal_font_size = 720
 text = "Your final score ends up to be: "
 
 [node name="Score" type="RichTextLabel" parent="." unique_id=370028925]
 texture_filter = 1
-offset_left = 288.0
-offset_top = 335.0
-offset_right = 1177.0
-offset_bottom = 470.0
-scale = Vector2(1.9985771, 1.9985771)
-theme_override_fonts/normal_font = ExtResource("4_pmjk2")
+offset_left = 346.0
+offset_top = 251.0
+offset_right = 1235.0
+offset_bottom = 386.0
+scale = Vector2(2.6496592, 2.6496592)
+theme_override_constants/outline_size = 18
+theme_override_fonts/normal_font = ExtResource("3_d75mr")
 theme_override_font_sizes/normal_font_size = 69
 text = "0000"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=343421886]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 1.493
+anchor_top = -4.314
+anchor_right = 1.493
+anchor_bottom = -4.314
+offset_left = 48.0
+offset_top = 533.0
+offset_right = 846.0
+offset_bottom = 592.22754
+scale = Vector2(1.3169551, 1.3169551)
+theme_override_constants/separation = 15
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=248233952]
+texture_filter = 1
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_d75mr")
+theme_override_font_sizes/font_size = 37
+text = "  Enter Freeplay   "
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=190924806]
+texture_filter = 1
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_d75mr")
+theme_override_font_sizes/font_size = 36
+text = "      Settings      "
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1730330244]
+texture_filter = 1
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("3_d75mr")
+theme_override_font_sizes/font_size = 37
+text = "        Quit         ‎ 
+"
+
+[node name="High Score" type="RichTextLabel" parent="." unique_id=558345526]
+texture_filter = 1
+offset_left = 286.0
+offset_top = 450.0
+offset_right = 830.0
+offset_bottom = 519.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("3_d75mr")
+theme_override_font_sizes/normal_font_size = 49
+text = "High Score: 0000"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
