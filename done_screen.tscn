@@ -70,7 +70,7 @@ texture_filter = 1
 clip_contents = false
 offset_left = 73.0
 offset_top = 317.00003
-offset_right = 951.3008
+offset_right = 671.8095
 offset_bottom = 396.00006
 scale = Vector2(1.68, 1.68)
 theme_override_colors/default_color = Color(0.046064764, 0.7374445, 0.34935877, 1)
@@ -79,6 +79,7 @@ theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("4_i8ovo")
 theme_override_font_sizes/normal_font_size = 54
 text = "Score: "
+horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=723870698]
 texture_filter = 1
