@@ -7,7 +7,7 @@ var last_minigame_picked = 0
 var high_score = 0
 
 const DIFFICULTY_MAX_MINIGAME := 20
-const STEP_LEVEL := 7
+const STEP_LEVEL := 10
 const STEP_JUMP := 0.25
 const START_T := 0.1
 const POINTS_PER_SECOND_LEFT := 200
