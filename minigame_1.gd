@@ -33,7 +33,7 @@ func _process(delta: float) -> void: # running every frame brochacho
 			return
 	if timer_end: # if the timer does end...
 		Global.lives -= 1
-		Global.minigames_done -=1 #go back a minigame
+		Global.minigames_done -= 1 #go back a minigame
 		if Global.tutorial:
 			if Global.lives == 0:
 				get_tree().change_scene_to_file("res://death_screen.tscn") # lose ur lives
