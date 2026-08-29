@@ -4,7 +4,7 @@ A game full with lots of microgames for short quick bursts of joy and rage.
 
 <img width="890" height="498" alt="image" src="https://github.com/user-attachments/assets/eebfa2a1-ac86-412c-b353-2420ebfee35d" />
 
-https://spliceydice.itch.io/rifted-rush
+Playable link: https://spliceydice.itch.io/rifted-rush
 
 How to play:
 
