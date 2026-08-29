@@ -8,8 +8,8 @@ var high_score = 0
 
 const DIFFICULTY_MAX_MINIGAME := 20
 const STEP_LEVEL := 10
-const STEP_JUMP := 0.25
-const START_T := 0.1
+const STEP_JUMP := 0.2
+const START_T := 0.05
 const POINTS_PER_SECOND_LEFT := 200
 const SURVIVE_COMPLETION_BONUS := 300
 const BASE_POINTS := 100

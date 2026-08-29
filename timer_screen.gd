@@ -36,10 +36,10 @@ func _ready() -> void:
 		options.erase(Global.last_minigame_picked)
 		minigame_picked = options[randi() % options.size()]
 		Global.last_minigame_picked = minigame_picked
-		if Global.minigames_done == 7:
+		if Global.minigames_done == 10:
 			$RichTextLabel.visible = true
 			$RichTextLabel.activate_fade_mode()
-		if Global.minigames_done >= 7:
+		if Global.minigames_done >= 10:
 			$ScrollingBackgrund/Background.texture = load("res://space-backgrounds 1080p/Space BG_1-4_1920x1080.png")
 			$ScrollingBackgrund.autoscroll.x *= 2.5
 			await Timer(0.6)
