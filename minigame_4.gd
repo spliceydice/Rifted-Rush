@@ -6,10 +6,10 @@ var timer_end = false
 func _ready() -> void:
 	$RichTextLabel.activate_fade_mode()
 	if Global.tutorial:
-		$Player.scale *= 0.675
+		$Player.scale *= 0.6
 		await minigame_timer.Timer(6.4) # scale this
 	else:
-		$Player.scale *= 0.75
+		$Player.scale *= 0.675
 		var t = Global.difficulty_t()
 		await minigame_timer.Timer(lerp(6.4, 10.0, t)) # SCALE!!!
 	#after this is completed...
