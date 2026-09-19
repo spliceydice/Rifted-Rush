@@ -19,8 +19,8 @@ func _ready() -> void:
 		else:
 			$Container.visible = false
 		await Timer(1.0) # using the function created
-		if Global.minigames_done < 5: # if you havent completed 3 minigames yet 
-			Global.minigames_done = Global.minigames_done +1
+		if Global.minigames_done < 5: # if you havent completed 5 minigames yet 
+			Global.minigames_done = Global.minigames_done + 1
 			get_tree().change_scene_to_file("res://minigame_" + str(Global.minigames_done) + ".tscn") # changes your scene by arranging this frankenstein path. 
 # Above, your script is being told to go to the next minigame. If the
 # current minigame is Level 1, then you would be on minigame 1. If you 
@@ -32,14 +32,14 @@ func _ready() -> void:
 	else:
 		$Container.visible = false
 		Global.minigames_done = Global.minigames_done + 1
-		var options = [1, 2, 3, 4]
+		var options = [1, 2, 3, 4, 5]
 		options.erase(Global.last_minigame_picked)
 		minigame_picked = options[randi() % options.size()]
 		Global.last_minigame_picked = minigame_picked
-		if Global.minigames_done == 20:
+		if Global.minigames_done == 15:
 			$RichTextLabel.visible = true
 			$RichTextLabel.activate_fade_mode()
-		if Global.minigames_done >= 20:
+		if Global.minigames_done >= 15:
 			$ScrollingBackgrund/Background.texture = load("res://space-backgrounds 1080p/Space BG_1-4_1920x1080.png")
 			$ScrollingBackgrund.autoscroll.x *= 2.5
 			await Timer(0.6)
