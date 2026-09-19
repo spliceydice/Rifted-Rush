@@ -6,8 +6,8 @@ var tutorial = true
 var last_minigame_picked = 0
 var high_score = 0
 
-const DIFFICULTY_MAX_MINIGAME := 50
-const STEP_LEVEL := 20
+const DIFFICULTY_MAX_MINIGAME := 35
+const STEP_LEVEL := 15
 const STEP_JUMP := 0.15
 const START_T := 0.05
 const POINTS_PER_SECOND_LEFT := 200
