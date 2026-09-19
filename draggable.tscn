@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://ckh3dxyeb46xx"]
 
-[ext_resource type="Script" uid="uid://cll3aph3wn4hf" path="res://draggable.gd" id="1_u6fe1"]
 [ext_resource type="Texture2D" uid="uid://dl1rfi2b0domr" path="res://star.png" id="2_dtr5r"]
 [ext_resource type="Texture2D" uid="uid://8fggmyl4d5v0" path="res://yellow glow.png" id="3_iufs2"]
 
@@ -8,17 +7,16 @@
 
 [node name="draggable" type="Node2D" unique_id=606951041]
 scale = Vector2(0.75322217, 0.75322217)
-script = ExtResource("1_u6fe1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=939049272]
 texture = ExtResource("2_dtr5r")
 
 [node name="TextureRect" type="TextureRect" parent="Sprite2D" unique_id=1376911131]
 show_behind_parent = true
-offset_left = -214.0
-offset_top = -212.0
-offset_right = 233.0
-offset_bottom = 235.0
+offset_left = -219.31049
+offset_top = -214.65527
+offset_right = 227.68951
+offset_bottom = 232.34473
 texture = ExtResource("3_iufs2")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=414068234]
