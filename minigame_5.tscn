@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://b1qqlqiw71mk4"]
 
 [ext_resource type="Texture2D" uid="uid://cltufpe226adj" path="res://Starry_night_Layer_8.png" id="1_7hn4c"]
+[ext_resource type="Script" uid="uid://c64p6g4u5fs3v" path="res://minigame_5.gd" id="1_yvq1l"]
 [ext_resource type="Texture2D" uid="uid://hnp0vjdiq2q5" path="res://Starry_night_star_1920x1080-ezgif.com-gif-to-sprite-converter.png" id="2_yvq1l"]
 [ext_resource type="Texture2D" uid="uid://xolt80kpwgcn" path="res://dashed-line.png" id="3_n2xk4"]
 [ext_resource type="Texture2D" uid="uid://b25nvawnvehf0" path="res://purple glow.png" id="4_r6yjh"]
 [ext_resource type="Script" uid="uid://bxm24dp4na5h6" path="res://draggable.gd" id="5_7hn4c"]
 [ext_resource type="PackedScene" uid="uid://ckh3dxyeb46xx" path="res://draggable.tscn" id="5_oyiys"]
+[ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="8_n2xk4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_yvq1l")
@@ -789,7 +791,10 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc03w"]
+
 [node name="minigame_5" type="Node2D" unique_id=324569253]
+script = ExtResource("1_yvq1l")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1414411719]
 texture_filter = 1
@@ -991,8 +996,21 @@ script = ExtResource("5_7hn4c")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=514806881]
 position = Vector2(146, 268)
 rotation = 0.91074294
+rotates = false
 
 [node name="draggable" parent="Path2D/PathFollow2D" unique_id=606951041 instance=ExtResource("5_oyiys")]
 position = Vector2(1.31726265e-05, 3.2782555e-06)
 rotation = -0.9110619
 scale = Vector2(0.50378263, 0.50378263)
+
+[node name="end_zone" type="Area2D" parent="." unique_id=141671824]
+position = Vector2(1042, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="end_zone" unique_id=1859002417]
+shape = SubResource("RectangleShape2D_fc03w")
+
+[node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("8_n2xk4")]
+position = Vector2(957.00006, 28)
+scale = Vector2(1.2601802, 1.2601802)
+
+[connection signal="area_entered" from="end_zone" to="." method="_on_end_zone_area_entered"]
