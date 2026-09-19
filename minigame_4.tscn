@@ -840,10 +840,14 @@ position = Vector2(581, 318)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=53843519]
 
-[node name="spamball_spawner" type="Node2D" parent="CanvasLayer" unique_id=325925502]
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=976953758]
+wait_time = 0.135
+autostart = true
+
+[node name="spamball_spawner" type="Node2D" parent="CanvasLayer/Timer" unique_id=325925502]
 script = ExtResource("3_yanj6")
 
-[node name="Timer" type="Timer" parent="CanvasLayer/spamball_spawner" unique_id=1112687867]
+[node name="Timer" type="Timer" parent="CanvasLayer/Timer/spamball_spawner" unique_id=1112687867]
 wait_time = 0.29
 autostart = true
 
@@ -1033,4 +1037,4 @@ text = "DODGE!"
 script = ExtResource("9_thd57")
 
 [connection signal="player_area_entered" from="Player" to="." method="_on_player_player_area_entered"]
-[connection signal="timeout" from="CanvasLayer/spamball_spawner/Timer" to="CanvasLayer/spamball_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Timer/spamball_spawner/Timer" to="CanvasLayer/Timer/spamball_spawner" method="_on_timer_timeout"]
