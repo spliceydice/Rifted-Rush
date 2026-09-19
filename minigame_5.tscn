@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://hnp0vjdiq2q5" path="res://Starry_night_star_1920x1080-ezgif.com-gif-to-sprite-converter.png" id="2_yvq1l"]
 [ext_resource type="Texture2D" uid="uid://xolt80kpwgcn" path="res://dashed-line.png" id="3_n2xk4"]
 [ext_resource type="Texture2D" uid="uid://b25nvawnvehf0" path="res://purple glow.png" id="4_r6yjh"]
+[ext_resource type="Script" uid="uid://bxm24dp4na5h6" path="res://draggable.gd" id="5_7hn4c"]
 [ext_resource type="PackedScene" uid="uid://ckh3dxyeb46xx" path="res://draggable.tscn" id="5_oyiys"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
@@ -782,6 +783,12 @@ animations = [{
 "speed": 7.5
 }]
 
+[sub_resource type="Curve2D" id="Curve2D_oyiys"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 146, 268, 0, 0, 0, 0, 309, 478, 0, 0, 0, 0, 528, 321, 0, 0, 0, 0, 826, 398, 0, 0, 0, 0, 1009, 212)
+}
+point_count = 5
+
 [node name="minigame_5" type="Node2D" unique_id=324569253]
 
 [node name="Background" type="TextureRect" parent="." unique_id=1414411719]
@@ -977,5 +984,15 @@ offset_bottom = 90590.555
 scale = Vector2(0.043176416, 0.043176416)
 texture = ExtResource("4_r6yjh")
 
-[node name="draggable" parent="." unique_id=606951041 instance=ExtResource("5_oyiys")]
-position = Vector2(470, 209)
+[node name="Path2D" type="Path2D" parent="." unique_id=1046921444]
+curve = SubResource("Curve2D_oyiys")
+script = ExtResource("5_7hn4c")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=514806881]
+position = Vector2(146, 268)
+rotation = 0.91074294
+
+[node name="draggable" parent="Path2D/PathFollow2D" unique_id=606951041 instance=ExtResource("5_oyiys")]
+position = Vector2(1.31726265e-05, 3.2782555e-06)
+rotation = -0.9110619
+scale = Vector2(0.50378263, 0.50378263)
