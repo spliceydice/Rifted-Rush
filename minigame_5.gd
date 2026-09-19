@@ -5,6 +5,7 @@ var buttons_pressed = 0
 var timer_end = false
 
 func _ready() -> void:
+	$RichTextLabel.activate_fade_mode()
 	if Global.tutorial:
 		await minigame_timer.Timer(5)
 	else:

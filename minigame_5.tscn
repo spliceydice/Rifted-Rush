@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://bxm24dp4na5h6" path="res://draggable.gd" id="5_7hn4c"]
 [ext_resource type="PackedScene" uid="uid://ckh3dxyeb46xx" path="res://draggable.tscn" id="5_oyiys"]
 [ext_resource type="PackedScene" uid="uid://b8x1uvs0ls6uq" path="res://minigame_timer.tscn" id="8_n2xk4"]
+[ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="9_yk8as"]
+[ext_resource type="Script" uid="uid://d35mdvq1pox7x" path="res://popup.gd" id="10_6r0gd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_yvq1l")
@@ -1010,7 +1012,22 @@ position = Vector2(1042, 180)
 shape = SubResource("RectangleShape2D_fc03w")
 
 [node name="minigame_timer" parent="." unique_id=603328823 instance=ExtResource("8_n2xk4")]
-position = Vector2(957.00006, 28)
+position = Vector2(982.00006, 32)
 scale = Vector2(1.2601802, 1.2601802)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=601253034]
+texture_filter = 1
+offset_left = 357.0
+offset_top = 111.99999
+offset_right = 1071.7859
+offset_bottom = 332.0
+rotation = 0.26813185
+scale = Vector2(1.4525492, 1.4525492)
+mouse_filter = 2
+theme_override_constants/outline_size = 53
+theme_override_fonts/normal_font = ExtResource("9_yk8as")
+theme_override_font_sizes/normal_font_size = 164
+text = "DRAG!"
+script = ExtResource("10_6r0gd")
 
 [connection signal="area_entered" from="end_zone" to="." method="_on_end_zone_area_entered"]
