@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 			get_tree().change_scene_to_file("res://timer_screen.tscn")
 			return
 		else:
-			Global.score += int(Global.SURVIVE_COMPLETION_BONUS * (1.0 + Global.difficulty_t()))
+			Global.score += int(Global.SURVIVE_COMPLETION_BONUS * (1.0 + Global.difficulty_t()) * Global.score_multiplier())
 			get_tree().change_scene_to_file("res://timer_screen.tscn")
 			return
 

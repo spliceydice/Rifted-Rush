@@ -16,7 +16,7 @@ func _ready() -> void:
 
 func _on_end_zone_area_entered(area: Area2D) -> void:
 	Global.add_time_score(minigame_timer.time)
-	Global.score += Global.BASE_POINTS
+	Global.score += int(Global.BASE_POINTS * Global.score_multiplier())
 	if Global.tutorial:
 		get_tree().change_scene_to_file("res://done_screen.tscn")
 	else:

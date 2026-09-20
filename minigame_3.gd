@@ -16,7 +16,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if timer_end:
-		Global.score += int(Global.SURVIVE_COMPLETION_BONUS * (1.0 + Global.difficulty_t()))
+		Global.score += int(Global.SURVIVE_COMPLETION_BONUS * (1.0 + Global.difficulty_t()) * Global.score_multiplier())
 		get_tree().change_scene_to_file("res://timer_screen.tscn")
 		return
 
