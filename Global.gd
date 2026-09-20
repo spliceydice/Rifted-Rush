@@ -13,10 +13,26 @@ const START_T := 0.05
 const POINTS_PER_SECOND_LEFT := 200
 const SURVIVE_COMPLETION_BONUS := 300
 const BASE_POINTS := 100
+# claude start
+const MULTIPLIER_START_MINIGAME := 1
+const MULTIPLIER_END_MINIGAME := 12
+const MULTIPLIER_START_VALUE := 0.5
+const MULTIPLIER_END_VALUE := 1.1
+
+func score_multiplier() -> float:
+	var level = minigames_done
+	if level <= MULTIPLIER_START_MINIGAME:
+		return MULTIPLIER_START_VALUE
+	if level >= MULTIPLIER_END_MINIGAME:
+		return MULTIPLIER_END_VALUE
+	var t = float(level - MULTIPLIER_START_MINIGAME) / float(MULTIPLIER_END_MINIGAME - MULTIPLIER_START_MINIGAME)
+	return lerp(MULTIPLIER_START_VALUE, MULTIPLIER_END_VALUE, t)
+
+# claude end
 
 func add_time_score(time_left: float) -> void:
 	var snapped_time = snapped(time_left, 0.5)
-	score += int(snapped_time * POINTS_PER_SECOND_LEFT)
+	score += int(snapped_time * POINTS_PER_SECOND_LEFT * score_multiplier())
 
 func difficulty_t() -> float:
 	var level = minigames_done
