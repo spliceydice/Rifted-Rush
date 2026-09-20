@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://bmlq12eg51vyj" path="res://timer_screen.gd" id="1_ue55m"]
 [ext_resource type="Texture2D" uid="uid://dafv842berqip" path="res://space-backgrounds 1080p/Space BG_1-3_1920x1080.png" id="2_ue55m"]
 [ext_resource type="Texture2D" uid="uid://t8rjj2ndouqb" path="res://mc_hc_heart.png" id="3_ai4b2"]
+[ext_resource type="Texture2D" uid="uid://b4wc7q7rmrvnk" path="res://keys/W.png" id="6_2ajfq"]
 [ext_resource type="Script" uid="uid://dhrssgkdioa63" path="res://spaceship_controls.gd" id="6_ieghi"]
 [ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="7_2ajfq"]
-[ext_resource type="Texture2D" uid="uid://d0adxggahj4ne" path="res://keys/ARROWUP.png" id="8_vivli"]
-[ext_resource type="Texture2D" uid="uid://pegbr47im16i" path="res://keys/ARROWLEFT.png" id="9_45gtm"]
-[ext_resource type="Texture2D" uid="uid://dxmqtdxnhflmr" path="res://keys/ARROWDOWN.png" id="10_61tor"]
+[ext_resource type="Texture2D" uid="uid://c2lk460v6a4u1" path="res://keys/A.png" id="7_vivli"]
+[ext_resource type="Texture2D" uid="uid://6nuckeo587y3" path="res://keys/S.png" id="8_45gtm"]
+[ext_resource type="Texture2D" uid="uid://boh8n54fbwtgf" path="res://keys/D.png" id="9_61tor"]
 [ext_resource type="FontFile" uid="uid://tv3hydgh31bd" path="res://press-start-2p-font/PressStart2P-vaV7.ttf" id="10_f6rmc"]
-[ext_resource type="Texture2D" uid="uid://cggsyasb5t57w" path="res://keys/ARROWRIGHT.png" id="11_18i6d"]
 [ext_resource type="Script" uid="uid://d35mdvq1pox7x" path="res://popup.gd" id="11_ieghi"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8wodn"]
@@ -114,7 +114,7 @@ offset_left = 141.0
 offset_top = 112.533264
 offset_right = 241.0
 offset_bottom = 212.53328
-texture = ExtResource("8_vivli")
+texture = ExtResource("6_2ajfq")
 
 [node name="TextureRect2" type="TextureRect" parent="Container" unique_id=552990382]
 texture_filter = 1
@@ -123,7 +123,7 @@ offset_left = 25.532898
 offset_top = 228.0
 offset_right = 125.5329
 offset_bottom = 328.0
-texture = ExtResource("9_45gtm")
+texture = ExtResource("7_vivli")
 
 [node name="TextureRect3" type="TextureRect" parent="Container" unique_id=846631946]
 texture_filter = 1
@@ -132,7 +132,7 @@ offset_left = 141.0
 offset_top = 228.0
 offset_right = 241.0
 offset_bottom = 328.0
-texture = ExtResource("10_61tor")
+texture = ExtResource("8_45gtm")
 
 [node name="TextureRect4" type="TextureRect" parent="Container" unique_id=569066060]
 texture_filter = 1
@@ -141,7 +141,7 @@ offset_left = 256.9997
 offset_top = 228.0
 offset_right = 356.9997
 offset_bottom = 328.0
-texture = ExtResource("11_18i6d")
+texture = ExtResource("9_61tor")
 
 [node name="Score" type="RichTextLabel" parent="." unique_id=1980841810]
 clip_contents = false
