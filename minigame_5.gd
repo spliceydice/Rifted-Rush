@@ -10,7 +10,7 @@ func _ready() -> void:
 		await minigame_timer.Timer(5)
 	else:
 		var t = Global.difficulty_t()
-		await minigame_timer.Timer(lerp(4.25, 2.0, t)) # SCALE!!!
+		await minigame_timer.Timer(lerp(4.25, 2.25, t)) # SCALE!!!
 	#after this is completed...
 	timer_end = true
 
