@@ -10,9 +10,7 @@ func _ready() -> void:
 
 func _unhandled_input(event) -> void:
 	if event is InputEventKey and event.pressed and not event.is_echo():
-		if rotation_degrees > -60:
-			if event.keycode == KEY_LEFT or event.keycode == KEY_A:
-				rotation_degrees -= rotation_step
-		if rotation_degrees < 60:
-			if event.keycode == KEY_RIGHT or event.keycode == KEY_D:
-				rotation_degrees += rotation_step
+		if event.keycode == KEY_LEFT or event.keycode == KEY_A:
+			rotation_degrees = clamp(rotation_degrees - rotation_step, -60, 60)
+		if event.keycode == KEY_RIGHT or event.keycode == KEY_D:
+				rotation_degrees = clamp(rotation_degrees + rotation_step, -60, 60)
