@@ -7,10 +7,10 @@ func _ready() -> void:
 	Global.last_minigame_picked = 0
 	score_label.text = "Score:" + str(Global.score)
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://timer_screen.tscn")
 	Global.score = 0
+	get_tree().change_scene_to_file("res://timer_screen.tscn")
 func _on_quit_pressed() -> void:
 	get_tree().change_scene_to_file("res://title_screen.tscn")
 func _on_settings_pressed() -> void:
-	get_tree().change_scene_to_file("res://settings_screen.tscn")
 	Global.score = 0
+	get_tree().change_scene_to_file("res://settings_screen.tscn")
