@@ -782,6 +782,8 @@ animations = [{
 "speed": 7.5
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pu0km"]
+
 [node name="title_screen" type="Node2D" unique_id=1101970525]
 script = ExtResource("1_v6p8y")
 
@@ -874,17 +876,23 @@ text = "           Quit          ‎
 
 [node name="Rift" type="Button" parent="." unique_id=1010694126]
 texture_filter = 1
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 64.0
+offset_top = 337.0
+offset_right = 462.0
+offset_bottom = 590.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pu0km")
 
 [node name="TextureRect" type="TextureRect" parent="Rift" unique_id=1768274808]
+show_behind_parent = true
+clip_contents = true
 layout_mode = 0
-offset_left = 98.99997
-offset_top = 554.0
-offset_right = 1123.0
-offset_bottom = 1342.0
+offset_left = -20.000023
+offset_top = 214.00006
+offset_right = 1004.0
+offset_bottom = 1002.00006
 rotation = -1.1638646
-scale = Vector2(0.5561977, 0.5561977)
+scale = Vector2(0.6728533, 0.6728533)
+mouse_filter = 2
 texture = ExtResource("4_05l2w")
 
 [node name="debug" type="Button" parent="." unique_id=1843052848]
@@ -897,4 +905,5 @@ text = "skip tutorial"
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Rift" to="." method="_on_rift_pressed"]
 [connection signal="pressed" from="debug" to="." method="_on_button_pressed"]
