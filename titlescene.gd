@@ -1,5 +1,12 @@
 extends Node2D
 
+func _ready() -> void:
+	Global.score = 0
+	Global.minigames_done = 0
+	Global.lives = 5
+	Global.last_minigame_picked = 0
+	Global.forced_minigame = 0
+
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://timer_screen.tscn")
 
@@ -14,3 +21,7 @@ func _on_settings_pressed() -> void:
 func _on_button_pressed() -> void:
 	Global.tutorial = false
 	$debug.visible = false
+
+
+func _on_rift_pressed() -> void:
+	get_tree().change_scene_to_file("res://minigame_practice.tscn")
