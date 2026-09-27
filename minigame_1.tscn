@@ -475,6 +475,18 @@ position = Vector2(1641.8677, 513.6537)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_261h4")
 
+[node name="Quit" type="Button" parent="." unique_id=375701509]
+offset_left = 1022.0
+offset_top = 585.0
+offset_right = 1112.7861
+offset_bottom = 630.0
+scale = Vector2(1.4309682, 1.4309682)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Exit
+"
+
 [connection signal="garlic_collected" from="Star" to="." method="garlic_collect"]
 [connection signal="garlic_collected" from="Star2" to="." method="garlic_collect"]
 [connection signal="garlic_collected" from="Star3" to="." method="garlic_collect"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

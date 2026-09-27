@@ -877,7 +877,19 @@ theme_override_font_sizes/normal_font_size = 164
 text = "CLICK!"
 script = ExtResource("8_v84ot")
 
+[node name="Quit" type="Button" parent="." unique_id=32564873]
+offset_left = 1022.0
+offset_top = 585.0
+offset_right = 1112.7861
+offset_bottom = 630.0
+scale = Vector2(1.4309682, 1.4309682)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Exit
+"
+
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
 [connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
 [connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

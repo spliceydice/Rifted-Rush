@@ -1036,5 +1036,17 @@ theme_override_font_sizes/normal_font_size = 164
 text = "DODGE!"
 script = ExtResource("9_thd57")
 
+[node name="Quit" type="Button" parent="." unique_id=1465162965]
+offset_left = 1022.0
+offset_top = 585.0
+offset_right = 1112.7861
+offset_bottom = 630.0
+scale = Vector2(1.4309682, 1.4309682)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Exit
+"
+
 [connection signal="player_area_entered" from="Player" to="." method="_on_player_player_area_entered"]
 [connection signal="timeout" from="CanvasLayer/Timer/spamball_spawner/Timer" to="CanvasLayer/Timer/spamball_spawner" method="_on_timer_timeout"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

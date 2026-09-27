@@ -11,8 +11,6 @@
 [ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="9_txmog"]
 [ext_resource type="Script" uid="uid://d35mdvq1pox7x" path="res://popup.gd" id="10_8sil2"]
 [ext_resource type="Script" uid="uid://d3jd7kat4h0kq" path="res://shield-controls.gd" id="11_4v0ru"]
-[ext_resource type="Texture2D" uid="uid://pegbr47im16i" path="res://keys/ARROWLEFT.png" id="12_4v0ru"]
-[ext_resource type="Texture2D" uid="uid://cggsyasb5t57w" path="res://keys/ARROWRIGHT.png" id="13_iq1sh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_33dbb")
@@ -904,13 +902,25 @@ scale = Vector2(9.724809, 9.724809)
 theme_override_constants/separation = 59
 script = ExtResource("11_4v0ru")
 
-[node name="left arrow key" type="TextureRect" parent="controls" unique_id=1652902414]
+[node name="A key" type="TextureRect" parent="controls" unique_id=1652902414]
 layout_mode = 2
 texture = ExtResource("12_4v0ru")
 
-[node name="right arrow key" type="TextureRect" parent="controls" unique_id=749105800]
+[node name="D key" type="TextureRect" parent="controls" unique_id=749105800]
 layout_mode = 2
 texture = ExtResource("13_iq1sh")
 
+[node name="Quit" type="Button" parent="." unique_id=2128990942]
+offset_left = 1022.0
+offset_top = 585.0
+offset_right = 1112.7861
+offset_bottom = 630.0
+scale = Vector2(1.4309682, 1.4309682)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Exit
+"
+
 [connection signal="area_entered" from="moon" to="." method="_on_moon_area_entered"]
 [connection signal="timeout" from="CanvasLayer/Timer/FireballSpawner/Timer" to="CanvasLayer/Timer/FireballSpawner" method="_on_timer_timeout"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

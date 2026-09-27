@@ -49,7 +49,10 @@ func _process(delta: float) -> void:
 				return
 			else:
 				get_tree().change_scene_to_file("res://end_screen.tscn")
+				return
 		else:
 			get_tree().change_scene_to_file("res://timer_screen.tscn")
 			return
-	
+
+func _on_quit_pressed() -> void:
+	get_tree().change_scene_to_file("res://minigame_practice.tscn") # Replace with function body.

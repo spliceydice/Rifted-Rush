@@ -36,3 +36,6 @@ func _on_moon_area_entered(area: Area2D) -> void:
 	else:
 		get_tree().change_scene_to_file("res://timer_screen.tscn")
 		return
+
+func _on_quit_pressed() -> void:
+	get_tree().change_scene_to_file("res://minigame_practice.tscn") # Replace with function body.
