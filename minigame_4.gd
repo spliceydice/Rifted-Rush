@@ -5,6 +5,10 @@ var timer_end = false
 
 func _ready() -> void:
 	$RichTextLabel.activate_fade_mode()
+	$Quit.visible = false
+	if Global.forced_minigame > 0:
+		$Quit.visible = true
+		Global.minigames_done += 3
 	if Global.tutorial:
 		$Player.scale *= 0.6
 		await minigame_timer.Timer(6.4) # scale this

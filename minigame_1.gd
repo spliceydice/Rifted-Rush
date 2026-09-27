@@ -16,6 +16,10 @@ func _ready() -> void:
 		# tell the script to wait for a signal, or for when a function finshes
 
 
+	$Quit.visible = false
+	if Global.forced_minigame > 0:
+		$Quit.visible = true
+		Global.minigames_done += 3
 	if Global.tutorial:
 		await minigame_timer.Timer(12) #accessing a function from this node
 	else:
