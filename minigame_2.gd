@@ -15,7 +15,7 @@ func _ready() -> void:
 	else:
 		randomize_buttons()
 		var t = Global.difficulty_t()
-		await minigame_timer.Timer(lerp(4.0, 1.8, t)) # SCALE!!!
+		await minigame_timer.Timer(lerp(4.0, 1.4, t)) # SCALE!!!
 	#after this is completed...
 	timer_end = true 
 

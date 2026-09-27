@@ -25,7 +25,7 @@ func _ready() -> void:
 	else:
 		var t = Global.difficulty_t()
 		$Player.speed = lerp(575.0, 1050.0, t)
-		await minigame_timer.Timer(lerp(9.0, 3.5, t)) #SCALE!!!
+		await minigame_timer.Timer(lerp(9.0, 2.6, t)) #SCALE!!!
 	#after this is compeleted...
 	timer_end = true # now we're saying "oh ye you ran out of time"
 
