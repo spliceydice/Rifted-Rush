@@ -11,6 +11,8 @@
 [ext_resource type="FontFile" uid="uid://s0gc5q7cynks" path="res://PixelifySans-VariableFont_wght.ttf" id="9_txmog"]
 [ext_resource type="Script" uid="uid://d35mdvq1pox7x" path="res://popup.gd" id="10_8sil2"]
 [ext_resource type="Script" uid="uid://d3jd7kat4h0kq" path="res://shield-controls.gd" id="11_4v0ru"]
+[ext_resource type="Texture2D" uid="uid://c2lk460v6a4u1" path="res://keys/A.png" id="12_4v0ru"]
+[ext_resource type="Texture2D" uid="uid://boh8n54fbwtgf" path="res://keys/D.png" id="13_iq1sh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hafda"]
 atlas = ExtResource("2_33dbb")
