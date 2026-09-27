@@ -13,7 +13,7 @@ var minigame_picked
 
 func _ready() -> void: 
 	$RichTextLabel.visible = false
-	if Global.tutorial:
+	if Global.tutorial and Global.forced_minigame == 0:
 		if Global.minigames_done == 0:
 			$Container.activate_fade_mode()
 		else:
@@ -29,6 +29,8 @@ func _ready() -> void:
 # should be next. Make sure you name your minigame saves appropriately.
 		else:
 			get_tree().change_scene_to_file("res://done_screen.tscn") # changes your scene
+	elif Global.forced_minigame > 0:
+		get_tree().change_scene_to_file("res://minigame_" + str(Global.forced_minigame) + ".tscn")
 	else:
 		$Container.visible = false
 		Global.minigames_done = Global.minigames_done + 1
