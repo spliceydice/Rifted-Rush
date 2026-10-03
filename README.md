@@ -1,4 +1,4 @@
-Rifted-Rush (a Wario-Ware style game)
+# Rifted-Rush (a Wario-Ware style game)
 
 A game full with lots of microgames for short quick bursts of joy and rage.
 
@@ -6,17 +6,17 @@ A game full with lots of microgames for short quick bursts of joy and rage.
 
 Playable link: https://spliceydice.itch.io/rifted-rush
 
-How to play:
+## How to play:
 
 	Included in tutorial:
 	
 		Beat minigames before the timer runs out.
 	
-		Use arrow keys and space to move the character/jump.
+		Use arrow keys / WASD and space to move the character/jump.
 	
 		Click to collect stars.
 
-You have 5 lives to try and get through as many minigames as you can:
+## You have 5 lives to try and get through as many minigames as you can:
 	
 	Star Grab - fly to each star and get them before it's too late!
 	
@@ -25,7 +25,15 @@ You have 5 lives to try and get through as many minigames as you can:
 	Defender - rotate a shield to protect youself from incoming fireballs.
 	
 	Dodge - just dodge bro 
+	
+	Star Drag - carry the star to its destination
 
 make sure to get a score higher than the stars
 
-built in godot (for Stardance)
+## 🛠️ Built With
+* **Engine:** Godot
+* **Event:** Stardance / Hackclub
+
+## 🎨 Credits & Assets
+* **Fireball VFX:** [nyknck](https://itch.io)
+* **Background Art:** [shiroze](https://itch.io)
