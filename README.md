@@ -35,5 +35,5 @@ make sure to get a score higher than the stars
 * **Event:** Stardance / Hackclub
 
 ## Credits & Assets
-* **Fireball VFX:** [nyknck](https://nyknck.shiroze.itch.io/)
+* **Fireball VFX:** [nyknck](https://nyknck.itch.io/)
 * **Background Art:** [shiroze](https://shiroze.itch.io/)
