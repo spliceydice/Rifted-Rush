@@ -6,6 +6,10 @@ func _ready() -> void:
 	Global.lives = 5
 	Global.last_minigame_picked = 0
 	Global.forced_minigame = 0
+	if Global.tutorial == true:
+		$Rift.disabled = true
+	else:
+		$Rift.disabled = false 
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://timer_screen.tscn")
