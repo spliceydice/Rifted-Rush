@@ -30,10 +30,10 @@ Playable link: https://spliceydice.itch.io/rifted-rush
 
 make sure to get a score higher than the stars
 
-## 🛠️ Built With
+## Built With
 * **Engine:** Godot
 * **Event:** Stardance / Hackclub
 
-## 🎨 Credits & Assets
-* **Fireball VFX:** [nyknck](https://itch.io)
-* **Background Art:** [shiroze](https://itch.io)
+## Credits & Assets
+* **Fireball VFX:** [nyknck](https://nyknck.shiroze.itch.io/)
+* **Background Art:** [shiroze](https://shiroze.itch.io/)
